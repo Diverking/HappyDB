@@ -1,0 +1,2134 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <title>
+                <h1>Lingmotif Multi-document Report</h1><h2>exercise</h2>
+
+            </title>
+            <style>
+                 
+        <style>
+        
+            body {
+                font-family: Verdana;
+                color: navy;
+                background-color: white;
+            }
+            ul {
+                list-style-type: square;
+                margin: 5;
+                padding: 10;
+                text-align: left;
+                vertical-align: text-top;
+                }
+            .centered {
+              display : block;
+              margin : 0 auto;
+              text-align: left;
+              width: 800px;
+              }
+            .header {
+                padding: 25px;
+                text-align: center;
+                background: #07405f;
+                background: -moz-linear-gradient(top, #4892ba 0%, #237cac 66%, #07405f 100%);
+                background: -webkit-linear-gradient(top, #4892ba 0%, #237cac 66%, #07405f 100%);
+                background: linear-gradient(to bottom, #4892ba 0%, #237cac 66%, #07405f 100%);
+                color: white;
+                font-size: 24px;
+                font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+           }
+           main {
+                padding: 20px;
+                font-size: 15px;
+                font-color: #07405f;
+                font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+           } 
+            h2 {
+                text-align: center;
+                color: white;
+                font-size: 26px;
+            }
+            h3 {
+                text-align: center;
+                background: #07405f;
+                background: -moz-linear-gradient(top, #4892ba 0%, #237cac 66%, #07405f 100%);
+                background: -webkit-linear-gradient(top, #4892ba 0%, #237cac 66%, #07405f 100%);
+                background: linear-gradient(to bottom, #4892ba 0%, #237cac 66%, #07405f 100%);
+                font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                font-size: 20px;
+                padding: 10px;
+                color: white;
+            }
+            h4 {
+                font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                text-align: center;
+            }
+            p {
+                color: navy;
+                word-break: break-all;
+                text-indent: 10px;
+            }
+            #pneg {background-color:rgba(255,0,0,0.3);}
+            #ppos {background-color:rgba(0,255,0,0.3);}
+            #pneu {background-color:rgba(255,255,0,0.3);}
+            a:hover {
+                color: white;
+            }
+            .floating-box {
+            display: inline-block;
+            vertical-align:top;
+            margin: 15px;
+            border: 0px;
+            }
+            
+            table {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+              border: 1px solid #FFFFFF;
+              width: 80%;
+              text-align: center;
+              border-collapse: collapse;
+            }
+            table td, table th {
+              border: 1px solid #FFFFFF;
+              padding: 3px 2px;
+            }
+            table tbody td {
+              font-size: 14px;
+            }
+            table tr:nth-child(even) {
+              background: #D0E4F5;
+            }
+            table tbody th {
+              background: #0B6EA3;
+              background: -moz-linear-gradient(top, #4892ba 0%, #237cac 66%, #0B6EA3 100%);
+              background: -webkit-linear-gradient(top, #4892ba 0%, #237cac 66%, #0B6EA3 100%);
+              background: linear-gradient(to bottom, #4892ba 0%, #237cac 66%, #0B6EA3 100%);
+              border-bottom: 1px solid #FFFFFF;
+            }
+            table tbody th {
+              font-size: 14px;
+              font-weight: normal;
+              color: #FFFFFF;
+              text-align: center;
+              border-left: 1px solid #FFFFFF;
+            }
+            table thead th {
+              background: #0B6EA3;
+              background: -moz-linear-gradient(top, #4892ba 0%, #237cac 66%, #0B6EA3 100%);
+              background: -webkit-linear-gradient(top, #4892ba 0%, #237cac 66%, #0B6EA3 100%);
+              background: linear-gradient(to bottom, #4892ba 0%, #237cac 66%, #0B6EA3 100%);
+              border-bottom: 5px solid #FFFFFF;
+            }
+            table thead th {
+              font-size: 14px;
+              font-weight: normal;
+              color: #FFFFFF;
+              text-align: center;
+              border-left: 1px solid #FFFFFF;
+            }
+            table thead th:first-child {
+              border-left: none;
+            }
+
+            table tfoot td {
+              font-size: 14px;
+            }
+            
+                table.sums {
+                  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                  border: 1px solid #FFFFFF;
+                  width: 80%;
+                  text-align: center;
+                  border-collapse: collapse;
+                  margin-left:auto; 
+                  margin-right:auto;
+                  background: #D0E4F5;
+                }
+                table.sums td, table.sums th {
+                  border: 1px solid #FFFFFF;
+                  padding: 3px 2px;
+                }
+                table.sums tbody td {
+                  font-size: 14px;
+                }
+                table.sums tbody th {
+                  background: #0B6EA3;
+                  background: -moz-linear-gradient(top, #4892ba 0%, #237cac 66%, #0B6EA3 100%);
+                  background: -webkit-linear-gradient(top, #4892ba 0%, #237cac 66%, #0B6EA3 100%);
+                  background: linear-gradient(to bottom, #4892ba 0%, #237cac 66%, #0B6EA3 100%);
+                  border-bottom: 1px solid #FFFFFF;
+                }
+                table.sums tbody th {
+                  font-size: 14px;
+                  font-weight: normal;
+                  color: #FFFFFF;
+                  text-align: center;
+                  border-left: 1px solid #FFFFFF;
+                }
+                table.sums thead th {
+                  background: #0B6EA3;
+                  background: -moz-linear-gradient(top, #4892ba 0%, #237cac 66%, #0B6EA3 100%);
+                  background: -webkit-linear-gradient(top, #4892ba 0%, #237cac 66%, #0B6EA3 100%);
+                  background: linear-gradient(to bottom, #4892ba 0%, #237cac 66%, #0B6EA3 100%);
+                  border-bottom: 5px solid #FFFFFF;
+                }
+                table.sums thead th {
+                  font-size: 14px;
+                  font-weight: normal;
+                  color: #FFFFFF;
+                  text-align: center;
+                  border-left: 1px solid #FFFFFF;
+                }
+                table.sums thead th:first-child {
+                  border-left: none;
+                }
+    
+                table.sums tfoot td {
+                  font-size: 14px;
+                }
+                
+            table.lists {
+              font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+              border: 1px solid #FFFFFF;
+              width: 80%;
+              text-align: left;
+              margin-left:auto; 
+              margin-right:auto;
+              border-collapse: collapse;
+            }
+            
+            .wrapper {
+                position: relative;
+                width: 640px;
+                height: 210px;
+                margin: 50px auto 0 auto;
+                padding-bottom: 30px;
+                border: 1px solid rgb(204, 204, 204);
+                border-radius: 3px;
+                clear: both;
+            }
+            .box {
+                float: left;
+                width: 50%;
+                height: 50%;
+                box-sizing: border-box;
+            }
+            .gauge {
+                width: 320px;
+                height: 240px;
+            }
+             
+        </style>
+    </head>
+        
+            </style>            
+        </head>
+        <body>
+            <div class="header">
+                <h1>Lingmotif Multi-document Report</h1><h2>exercise</h2>
+
+            </div>
+        </body>
+        <main>
+        <h3>Sentiment Scores</h3>
+            
+        <div class="wrapper">
+        <div class="box">
+        <div id="g1" class="gauge"></div>
+        </div>
+        <div class="box">
+            <div id="g2" class="gauge"></div>
+        </div>
+        </div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.4/raphael-min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/justgage/1.2.2/justgage.js'></script>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+          var g1 = new JustGage({
+            id: 'g1',
+        title: "Text Sentiment Score",
+            label: "Extremely positive",            value: 89,
+
+            min: 0,
+            max: 100,
+            levelColors: [
+			"#c10111",
+			"#d63535",
+			"#f97575",
+			"#ea9f9f",
+			"#e8cb4e",
+			"#eff458",
+			"#d8f458",
+			"#bcf92c",
+			 "#6cb507",
+            ],
+            shadowOpacity: 1,
+            shadowSize: 5,
+            shadowVerticalOffset: 10,
+            pointer: true,
+            pointerOptions: {
+              toplength: -15,
+              bottomlength: 10,
+              bottomwidth: 12,
+              color: '#8e8e93',
+              stroke: '#ffffff',
+              stroke_width: 3,
+              stroke_linecap: 'round',
+            },
+            gaugeWidthScale: 0.6,
+            titleFontFamily: "Helvetica",
+            counter: true
+          });
+
+          var g2 = new JustGage({
+            id: 'g2',
+        title: "Text Sentiment Intensity",
+            label: "Factual",
+             value: 23,
+
+            min: 0,max: 100,
+            pointer: true,
+            pointerOptions: {
+              toplength: 8,
+              bottomlength: -20,
+              bottomwidth: 6,
+              color: '#8e8e93'
+            },
+            gaugeWidthScale: 0.1,
+            titleFontFamily: "Helvetica",
+            counter: true
+          });
+        });
+        </script>
+        
+        <h3>Document Sentiment Profile</h3>
+            <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rickshaw/1.6.6/rickshaw.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rickshaw/1.6.6/rickshaw.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <style>
+        #chart_container {
+            position: relative;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #chart {
+            position: relative;
+\            left: 25px;
+        }
+        #y_axis {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -29;
+            width: 30px;
+        }
+        #slider {
+            position: relative;
+\            left: 0px;
+            top: 10px;
+        }
+        #legend {
+            left: 1px;
+            top: 1px;
+            padding: 2px;
+        }
+        .rickshaw_legend {
+            font-family: Arial;
+            font-size: 12px;
+            background-color: #b3b3b3;
+            display: inline-block;
+            border-radius: 5px;
+            position: absolute;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+        }
+        </style>
+
+        <div id="chart_container">
+            <div id="chart"></div>
+            <div id="y_axis"></div>
+            <div id="slider"></div>
+            <div id="legend"></div>
+        </div>
+
+        <script>
+        var profile = [{ x: 0, y: 65 },{ x: 1, y: 90 },{ x: 2, y: 89 },{ x: 3, y: 81 },{ x: 4, y: 63 },{ x: 5, y: 60 },{ x: 6, y: 66 },{ x: 7, y: 75 },{ x: 8, y: 86 },{ x: 9, y: 74 },{ x: 10, y: 78 },{ x: 11, y: 72 },{ x: 12, y: 75 },{ x: 13, y: 71 },{ x: 14, y: 89 },{ x: 15, y: 87 },{ x: 16, y: 75 },{ x: 17, y: 74 },{ x: 18, y: 74 },{ x: 19, y: 74 },{ x: 20, y: 80 },{ x: 21, y: 80 },{ x: 22, y: 68 },{ x: 23, y: 74 },{ x: 24, y: 87 },{ x: 25, y: 77 },{ x: 26, y: 74 },{ x: 27, y: 87 },{ x: 28, y: 68 },{ x: 29, y: 89 },{ x: 30, y: 65 },{ x: 31, y: 59 },{ x: 32, y: 80 },{ x: 33, y: 81 },{ x: 34, y: 62 },{ x: 35, y: 77 },{ x: 36, y: 69 },{ x: 37, y: 98 },{ x: 38, y: 80 },{ x: 39, y: 83 },{ x: 40, y: 56 },{ x: 41, y: 72 },{ x: 42, y: 77 },{ x: 43, y: 95 },{ x: 44, y: 75 },{ x: 45, y: 54 },{ x: 46, y: 63 },{ x: 47, y: 65 },{ x: 48, y: 86 },{ x: 49, y: 83 },{ x: 50, y: 62 },{ x: 51, y: 77 },{ x: 52, y: 56 },{ x: 53, y: 77 },{ x: 54, y: 86 },{ x: 55, y: 83 },{ x: 56, y: 65 },{ x: 57, y: 63 },{ x: 58, y: 59 },{ x: 59, y: 69 },{ x: 60, y: 68 },{ x: 61, y: 77 },{ x: 62, y: 75 },{ x: 63, y: 72 },{ x: 64, y: 90 },{ x: 65, y: 77 },{ x: 66, y: 63 },{ x: 67, y: 75 },{ x: 68, y: 92 },{ x: 69, y: 69 },{ x: 70, y: 71 },{ x: 71, y: 81 },{ x: 72, y: 69 },{ x: 73, y: 71 },{ x: 74, y: 57 },{ x: 75, y: 80 },{ x: 76, y: 100 },{ x: 77, y: 72 },{ x: 78, y: 68 },{ x: 79, y: 68 },{ x: 80, y: 75 },{ x: 81, y: 59 },{ x: 82, y: 63 },{ x: 83, y: 93 },{ x: 84, y: 68 },{ x: 85, y: 86 },{ x: 86, y: 77 },{ x: 87, y: 69 },{ x: 88, y: 63 },{ x: 89, y: 62 },{ x: 90, y: 99 },{ x: 91, y: 76 },{ x: 92, y: 82 },{ x: 93, y: 81 },{ x: 94, y: 69 },{ x: 95, y: 85 },{ x: 96, y: 76 },{ x: 97, y: 84 },{ x: 98, y: 85 },{ x: 99, y: 87 },];
+
+        var words = [
+        "",
+"<font color='A3FA5F'>felt_great<font>, <font color='A3FA5F'>taking_care_of<font>, <font color='A3FA5F'>fitness<font>",
+"",
+"<font color='A3FA5F'>helped<font>, <font color='A3FA5F'>more_positive<font>",
+"",
+"<font color='A3FA5F'>motivated<font>",
+"<font color='#FA947E'>shrink_from<font>",
+"",
+"<font color='A3FA5F'>was_able_to<font>, <font color='A3FA5F'>was_able_to<font>",
+"<font color='A3FA5F'>good_time<font>",
+"<font color='A3FA5F'>happy<font>, <font color='A3FA5F'>was_able_to<font>",
+"<font color='A3FA5F'>good<font>",
+"<font color='A3FA5F'>was_able_to<font>",
+"",
+"<font color='A3FA5F'>refreshing<font>, <font color='A3FA5F'>soothing<font>, <font color='A3FA5F'>lose_weight<font>, <font color='A3FA5F'>nice<font>",
+"<font color='A3FA5F'>sunny<font>, <font color='A3FA5F'>felt_good<font>",
+"<font color='A3FA5F'>nice<font>",
+"",
+"<font color='#FA947E'>dreading<font>, <font color='A3FA5F'>making_progress<font>",
+"<font color='A3FA5F'>happy<font>, <font color='A3FA5F'>good<font>",
+"<font color='A3FA5F'>had_a_great<font>, <font color='A3FA5F'>feel_great<font>",
+"<font color='A3FA5F'>wonderful<font>",
+"",
+"<font color='A3FA5F'>good<font>, <font color='A3FA5F'>cool<font>",
+"<font color='A3FA5F'>happy<font>, <font color='A3FA5F'>happy<font>",
+"",
+"<font color='A3FA5F'>happy<font>, <font color='A3FA5F'>was_able_to<font>",
+"<font color='A3FA5F'>fresh<font>, <font color='A3FA5F'>confidant<font>, <font color='A3FA5F'>happy<font>",
+"<font color='A3FA5F'>happy<font>, <font color='A3FA5F'>felt_great<font>",
+"<font color='A3FA5F'>the_best<font>, <font color='A3FA5F'>was_able_to<font>",
+"<font color='#FA947E'>tired<font>",
+"<font color='#FA947E'>really_sore<font>, <font color='#FA947E'>painful<font>",
+"<font color='A3FA5F'>was_amazing<font>",
+"",
+"<font color='A3FA5F'>extremely_happy<font>",
+"<font color='A3FA5F'>FANTASTIC<font>",
+"<font color='A3FA5F'>pleased<font>, <font color='#FA947E'>a_bit_sore<font>, <font color='#FA947E'>tired<font>",
+"<font color='A3FA5F'>had_a_great<font>",
+"<font color='A3FA5F'>felt_pretty_good<font>, <font color='A3FA5F'>beautiful<font>",
+"<font color='#FA947E'>taxing<font>, <font color='A3FA5F'>nice<font>",
+"",
+"<font color='A3FA5F'>happier<font>",
+"<font color='#FA947E'>tension<font>, <font color='A3FA5F'>very_good<font>",
+"",
+"<font color='A3FA5F'>was_able_to<font>, <font color='A3FA5F'>happiness<font>, <font color='A3FA5F'>well-being<font>",
+"<font color='#FA947E'>overdue<font>, <font color='A3FA5F'>felt_so_good<font>, <font color='A3FA5F'>beautiful<font>",
+"",
+"<font color='A3FA5F'>fulfilling<font>",
+"<font color='A3FA5F'>feel_much_better<font>, <font color='A3FA5F'>was_able_to<font>",
+"<font color='A3FA5F'>meditation<font>, <font color='A3FA5F'>happy<font>, <font color='A3FA5F'>meditation<font>, <font color='A3FA5F'>relax<font>",
+"<font color='#FA947E'>tiring<font>",
+"<font color='A3FA5F'>attractive<font>, <font color='A3FA5F'>smiled<font>",
+"",
+"<font color='A3FA5F'>happy<font>",
+"<font color='A3FA5F'>always_enjoy<font>",
+"<font color='A3FA5F'>healthy<font>, <font color='A3FA5F'>in_shape<font>",
+"<font color='#FA947E'>depression<font>",
+"",
+"<font color='A3FA5F'>solid<font>",
+"",
+"<font color='A3FA5F'>losing_weight<font>",
+"<font color='A3FA5F'>feels_so_good<font>, <font color='A3FA5F'>felt_good<font>",
+"<font color='A3FA5F'>happy<font>",
+"<font color='A3FA5F'>had_a_great<font>",
+"<font color='A3FA5F'>excited<font>",
+"",
+"<font color='A3FA5F'>happy<font>",
+"<font color='A3FA5F'>best_time<font>",
+"<font color='A3FA5F'>talented<font>, <font color='#FA947E'>a_bit_rusty<font>, <font color='A3FA5F'>decent<font>, <font color='A3FA5F'>proud<font>",
+"",
+"<font color='A3FA5F'>really_satisfying<font>",
+"<font color='A3FA5F'>best_time<font>",
+"<font color='A3FA5F'>good<font>, <font color='A3FA5F'>Renewed<font>",
+"<font color='A3FA5F'>happy<font>, <font color='#FA947E'>not_working<font>, <font color='A3FA5F'>was_able_to<font>",
+"<font color='A3FA5F'>fantastic<font>, <font color='A3FA5F'>good<font>",
+"<font color='A3FA5F'>good<font>",
+"<font color='A3FA5F'>improves<font>, <font color='A3FA5F'>improvements<font>",
+"<font color='#FA947E'>injury<font>, <font color='A3FA5F'>feeling_better<font>, <font color='A3FA5F'>love<font>",
+"",
+"<font color='A3FA5F'>really_enjoyed<font>",
+"<font color='A3FA5F'>accomplished<font>, <font color='A3FA5F'>fitness<font>",
+"",
+"<font color='A3FA5F'>very_good<font>, <font color='A3FA5F'>good<font>",
+"<font color='A3FA5F'>feel_better<font>, <font color='A3FA5F'>was_able_to<font>, <font color='A3FA5F'>nice<font>",
+"<font color='A3FA5F'>happy<font>, <font color='#FA947E'>sore<font>, <font color='A3FA5F'>feel_much_better<font>, <font color='A3FA5F'>good<font>",
+"<font color='A3FA5F'>awesome<font>",
+"<font color='A3FA5F'>better_than<font>",
+"<font color='#FA947E'>difficult<font>, <font color='A3FA5F'>was_able_to<font>",
+"<font color='A3FA5F'>more_capable<font>",
+"",
+"<font color='A3FA5F'>was_able_to<font>, <font color='A3FA5F'>good<font>",
+"<font color='A3FA5F'>strength<font>",
+"<font color='A3FA5F'>Managed_to<font>, <font color='#FA947E'>snag<font>",
+"<font color='A3FA5F'>felt_good<font>, <font color='A3FA5F'>relieve<font>, <font color='#FA947E'>stress<font>, <font color='A3FA5F'>had_a_great<font>",
+"<font color='A3FA5F'>had_a_great<font>, <font color='A3FA5F'>feels_great<font>, <font color='A3FA5F'>felt_great<font>",
+"<font color='A3FA5F'>properly<font>, <font color='A3FA5F'>was_able_to<font>",
+"<font color='A3FA5F'>improvements<font>",
+"<font color='A3FA5F'>felt_great<font>",
+"<font color='A3FA5F'>had_a_great<font>, <font color='A3FA5F'>happy<font>",
+"<font color='A3FA5F'>relaxes<font>, <font color='A3FA5F'>happy<font>",
+        ];
+
+        var graph = new Rickshaw.Graph({
+            element: document.getElementById("chart"),
+         //   width: 960,
+        //    height: 180,
+            stroke: true,
+            strokeWidth: 3,
+            renderer: 'line', 	    // line without points
+        //    renderer: 'lineplot',   // line with points
+//            min: 'auto',
+            min: 0,
+            max: 100,
+            
+            series: [
+                { name: "Text", color: "steelblue", data: profile },
+
+            ]
+        });
+
+        var x_axis = new Rickshaw.Graph.Axis.X({
+            graph: graph,
+//            orientation: 'bottom',
+            ticks: 10,
+            pixelsPerTick: 25,
+        });
+
+        var y_axis = new Rickshaw.Graph.Axis.Y({
+            graph: graph,
+            tickValues: [0,10,20,30,40,50,60,70,80,90,100],
+            orientation: 'left',
+            tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
+            element: document.getElementById('y_axis'),
+        });
+
+        var legend = new Rickshaw.Graph.Legend({
+            graph: graph,
+            element: document.getElementById('legend')
+        });
+
+        var shelving = new Rickshaw.Graph.Behavior.Series.Toggle( {
+            graph: graph,
+            legend: legend
+        } );
+
+        var slider = new Rickshaw.Graph.RangeSlider.Preview({
+            graph: graph,
+            element: document.getElementById('slider')
+        });
+
+        var hoverDetail = new Rickshaw.Graph.HoverDetail( {
+            graph: graph,
+            formatter: function(series, x, y) {
+                    var content = '<span class="label" style="font-weight: bold">Segment: </span> <span class="chunks" >' + parseInt(x) + '</span><br>' +
+                '<span class="label" style="font-weight: bold">TSS: </span> <span class="chunks">' + parseInt(y) + '</span><br>' +
+                '<span class="label" style="font-weight: bold">Items: </span> <span class="chunks">' +
+            decodeURIComponent(escape(words[x])) + '</span>';       //decodeURIComponent(escape())  decodes the UTF-8 string
+            return content;
+                }
+            } );
+            
+        $(window).on('resize', function(){
+        graph.configure({
+            width: window.innerWidth - 50,
+            height: 200,
+        });
+        graph.render();
+        });
+        $(window).on('load', function(){
+        graph.configure({
+            width: window.innerWidth - 50,
+            height: 200,
+        });
+        graph.render();
+        });
+        </script><br><hr><br>
+        
+        <h3>Sentiment Data</h3>
+            <table class="sums">
+<tr><th>TSS</th><th>TSI</th><th>Positive Score</th><th>Negative Score</th><th>Neutral Score</th></tr>
+<tr><td>89</td><td>23</td><td>1925</td><td>228</td><td>1308</td></tr>
+<tr><th>Sentiment Items</th><th>Positive Items</th><th>Negative Items</th><th>Positive Sentences</th><th>Negative Sentences</th></tr>
+<tr><td>7592</td><td>841</td><td>112</td><td>634</td><td>45</td></tr>
+</table>
+
+        <h3>Positive Word Cloud</h3>
+            
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.1.0/wordcloud2.min.js"></script>
+        <div align="center"><canvas id='pos_cloud' class="word_cloud" width="600" height="280"></div><script>
+var db = [
+{"word":"happy","freq":60.0},
+{"word":"was able to","freq":58.96103896103896},
+{"word":"good","freq":54.8051948051948},
+{"word":"had a great","freq":41.2987012987013},
+{"word":"nice","freq":27.79220779220779},
+{"word":"felt great","freq":24.675324675324674},
+{"word":"really good","freq":24.675324675324674},
+{"word":"felt good","freq":23.636363636363637},
+{"word":"relax","freq":21.558441558441558},
+{"word":"very happy","freq":21.558441558441558},
+{"word":"energize","freq":21.038961038961038},
+{"word":"fitness","freq":20.51948051948052},
+{"word":"managed to","freq":20.51948051948052},
+{"word":"love","freq":20.51948051948052},
+{"word":"feel good","freq":20.0},
+]
+
+        list = [];
+        for (var i in db) {
+        list.push([db[i]["word"], db[i]["freq"]])
+        }
+        //backgroundColor = "#f5fff2"
+        shape = 'cardioid'
+        gridSize = 15
+        minSize = 4
+        origin = [400, 50]
+        WordCloud(document.getElementById('pos_cloud'), { list: list, shape: shape, gridSize: gridSize, origin: origin} );
+        </script>
+        
+        <h3>Negative Word Cloud</h3>
+            
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.1.0/wordcloud2.min.js"></script>
+        <div align="center"><canvas id='neg_cloud' class="word_cloud" width="600" height="280"></div><script>
+var db = [
+{"word":"tired","freq":60.0},
+{"word":"difficult","freq":48.57142857142857},
+{"word":"injury","freq":37.14285714285714},
+{"word":"stress","freq":31.42857142857143},
+{"word":"depression","freq":31.42857142857143},
+{"word":"sore","freq":31.42857142857143},
+{"word":"broke","freq":25.714285714285715},
+{"word":"sick","freq":25.714285714285715},
+{"word":"very tired","freq":25.714285714285715},
+{"word":"procrastinate","freq":20.0},
+{"word":"soreness","freq":20.0},
+{"word":"forced","freq":20.0},
+{"word":"really difficult","freq":20.0},
+{"word":"pain","freq":20.0},
+{"word":"injure","freq":20.0},
+]
+
+        list = [];
+        for (var i in db) {
+        list.push([db[i]["word"], db[i]["freq"]])
+        }
+        //backgroundColor = "#f5fff2"
+        shape = 'cardioid'
+        gridSize = 15
+        minSize = 4
+        origin = [400, 50]
+        WordCloud(document.getElementById('neg_cloud'), { list: list, shape: shape, gridSize: gridSize, origin: origin} );
+        </script>
+        
+        <h3>Top Positive and Negative Items</h3>
+            
+    <table class="lists">
+        <tr><th colspan="3">Top Positive Items</th><th colspan="3">Top Negative Items</th></tr>
+        <tr><th>Rank</th><th>Item</th><th>Frequency</th><th>Rank</th><th>Item</th><th>Frequency</th></tr>
+    <tr><td>1</td><td>happy</td><td>85<td>1</td><td>tired</td><td>9</td></tr>
+<tr><td>2</td><td>was able to</td><td>83<td>2</td><td>difficult</td><td>7</td></tr>
+<tr><td>3</td><td>good</td><td>75<td>3</td><td>injury</td><td>5</td></tr>
+<tr><td>4</td><td>had a great</td><td>49<td>4</td><td>stress</td><td>4</td></tr>
+<tr><td>5</td><td>nice</td><td>23<td>5</td><td>depression</td><td>4</td></tr>
+<tr><td>6</td><td>felt great</td><td>17<td>6</td><td>sore</td><td>4</td></tr>
+<tr><td>7</td><td>really good</td><td>17<td>7</td><td>broke</td><td>3</td></tr>
+<tr><td>8</td><td>felt good</td><td>15<td>8</td><td>sick</td><td>3</td></tr>
+<tr><td>9</td><td>relax</td><td>11<td>9</td><td>very tired</td><td>3</td></tr>
+<tr><td>10</td><td>very happy</td><td>11<td>10</td><td>procrastinate</td><td>2</td></tr>
+<tr><td>11</td><td>energize</td><td>10<td>11</td><td>soreness</td><td>2</td></tr>
+<tr><td>12</td><td>fitness</td><td>9<td>12</td><td>forced</td><td>2</td></tr>
+<tr><td>13</td><td>managed to</td><td>9<td>13</td><td>really difficult</td><td>2</td></tr>
+<tr><td>14</td><td>love</td><td>9<td>14</td><td>pain</td><td>2</td></tr>
+<tr><td>15</td><td>feel good</td><td>8<td>15</td><td>injure</td><td>2</td></tr>
+<tr><td>16</td><td>enjoy</td><td>8<td>16</td><td>problem</td><td>2</td></tr>
+<tr><td>17</td><td>progress</td><td>7<td>17</td><td>out of breath</td><td>2</td></tr>
+<tr><td>18</td><td>sunny</td><td>7<td>18</td><td>winded</td><td>1</td></tr>
+<tr><td>19</td><td>really happy</td><td>7<td>19</td><td>overly exhausted</td><td>1</td></tr>
+<tr><td>20</td><td>improvement</td><td>7<td>20</td><td>shrink from</td><td>1</td></tr>
+<tr><td>21</td><td>feel great</td><td>6<td>21</td><td>get tired</td><td>1</td></tr>
+<tr><td>22</td><td>motivate</td><td>6<td>22</td><td>ache</td><td>1</td></tr>
+<tr><td>23</td><td>awesome</td><td>6<td>23</td><td>hurt</td><td>1</td></tr>
+<tr><td>24</td><td>feel better</td><td>6<td>24</td><td>without taking a break</td><td>1</td></tr>
+<tr><td>25</td><td>cool</td><td>6<td>25</td><td>dread</td><td>1</td></tr>
+<tr><td>26</td><td>free</td><td>6<td>26</td><td>exhausted</td><td>1</td></tr>
+<tr><td>27</td><td>refresh</td><td>5<td>27</td><td>very stress</td><td>1</td></tr>
+<tr><td>28</td><td>beautiful</td><td>5<td>28</td><td>really tired</td><td>1</td></tr>
+<tr><td>29</td><td>felt amazing</td><td>5<td>29</td><td>sluggish</td><td>1</td></tr>
+<tr><td>30</td><td>in shape</td><td>5<td>30</td><td>a hard time</td><td>1</td></tr>
+<tr><td>31</td><td>was amazing</td><td>5<td>31</td><td>not feel well</td><td>1</td></tr>
+<tr><td>32</td><td>proud</td><td>4<td>32</td><td>really sore</td><td>1</td></tr>
+<tr><td>33</td><td>help</td><td>4<td>33</td><td>painful</td><td>1</td></tr>
+<tr><td>34</td><td>amazing</td><td>4<td>34</td><td>breaking</td><td>1</td></tr>
+<tr><td>35</td><td>lose weight</td><td>4<td>35</td><td>is not always fun</td><td>1</td></tr>
+<tr><td>36</td><td>fantastic</td><td>4<td>36</td><td>a bit sore</td><td>1</td></tr>
+<tr><td>37</td><td>meditation</td><td>4<td>37</td><td>taxing</td><td>1</td></tr>
+<tr><td>38</td><td>perfect</td><td>4<td>38</td><td>brutal</td><td>1</td></tr>
+<tr><td>39</td><td>very good</td><td>4<td>39</td><td>suffering from</td><td>1</td></tr>
+<tr><td>40</td><td>strength</td><td>4<td>40</td><td>tension</td><td>1</td></tr>
+<tr><td>41</td><td>healthy</td><td>4<td>41</td><td>horrible</td><td>1</td></tr>
+<tr><td>42</td><td>felt really good</td><td>4<td>42</td><td>overdue</td><td>1</td></tr>
+<tr><td>43</td><td>happiness</td><td>4<td>43</td><td>rather out of shape</td><td>1</td></tr>
+<tr><td>44</td><td>well-being</td><td>4<td>44</td><td>on the run</td><td>1</td></tr>
+<tr><td>45</td><td>effective</td><td>4<td>45</td><td>go badly</td><td>1</td></tr>
+<tr><td>46</td><td>overcoming depression</td><td>4<td>46</td><td>tiring</td><td>1</td></tr>
+<tr><td>47</td><td>improve</td><td>4<td>47</td><td>neglect</td><td>1</td></tr>
+<tr><td>48</td><td>excited</td><td>4<td>48</td><td>got tired</td><td>1</td></tr>
+<tr><td>49</td><td>good time</td><td>3<td>49</td><td>really bad</td><td>1</td></tr>
+<tr><td>50</td><td>satisfy</td><td>3<td>50</td><td>lose</td><td>1</td></tr>
+<tr><td>51</td><td>compliment</td><td>3<td>51</td><td>dead</td><td>1</td></tr>
+<tr><td>52</td><td>so happy</td><td>3<td>52</td><td>messy</td><td>1</td></tr>
+<tr><td>53</td><td>felt so good</td><td>3<td>53</td><td>crash</td><td>1</td></tr>
+<tr><td>54</td><td>favorite</td><td>3<td>54</td><td>not ideal</td><td>1</td></tr>
+<tr><td>55</td><td>glad</td><td>3<td>55</td><td>alert</td><td>1</td></tr>
+<tr><td>56</td><td>productive</td><td>3<td>56</td><td>a bit rusty</td><td>1</td></tr>
+<tr><td>57</td><td>recover</td><td>3<td>57</td><td>not working</td><td>1</td></tr>
+<tr><td>58</td><td>feeling better</td><td>3<td>58</td><td>getting tired</td><td>1</td></tr>
+<tr><td>59</td><td>is great</td><td>2<td>59</td><td>poorly</td><td>1</td></tr>
+<tr><td>60</td><td>taking care of</td><td>2<td>60</td><td>strain</td><td>1</td></tr>
+<tr><td>61</td><td>really enjoyed</td><td>2<td>61</td><td>struggle</td><td>1</td></tr>
+<tr><td>62</td><td>more confident</td><td>2<td>62</td><td>stuck</td><td>1</td></tr>
+<tr><td>63</td><td>had fun</td><td>2<td>63</td><td>illness</td><td>1</td></tr>
+<tr><td>64</td><td>really nice</td><td>2<td>64</td><td>suck</td><td>1</td></tr>
+<tr><td>65</td><td>sunshine</td><td>2<td>65</td><td>excuse</td><td>1</td></tr>
+<tr><td>66</td><td>properly</td><td>2<td>66</td><td>snag</td><td>1</td></tr>
+<tr><td>67</td><td>no fatigue</td><td>2<td>67</td><td>breathless</td><td>1</td></tr>
+<tr><td>68</td><td>wonderful</td><td>2<td>68</td><td>so sore</td><td>1</td></tr>
+<tr><td>69</td><td>decent</td><td>2<td>69</td><td>engorge</td><td>1</td></tr>
+<tr><td>70</td><td>excellent</td><td>2<td>70</td><td>such a struggle for</td><td>1</td></tr>
+<tr><td>71</td><td>felt pretty good</td><td>2<td>71</td><td>rip</td><td>1</td></tr>
+<tr><td>72</td><td>fresh</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>73</td><td>accomplished</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>74</td><td>the best</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>75</td><td>cute</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>76</td><td>having a great</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>77</td><td>smile</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>78</td><td>feels so good</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>79</td><td>getting better</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>80</td><td>was a great</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>81</td><td>feel much better</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>82</td><td>confidence</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>83</td><td>better than</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>84</td><td>attractive</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>85</td><td>thrill</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>86</td><td>losing weight</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>87</td><td>best time</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>88</td><td>paying off</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>89</td><td>was fun</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>90</td><td>satisfaction</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>91</td><td>motivation</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>92</td><td>relieve</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>93</td><td>rejuvenate</td><td>2<td></td><td></td><td></td></tr>
+<tr><td>94</td><td>very fresh</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>95</td><td>how awesome</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>96</td><td>warm</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>97</td><td>enough for</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>98</td><td>more positive</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>99</td><td>pretty energized</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>100</td><td>energetic</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>101</td><td>had a good time</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>102</td><td>athletic</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>103</td><td>funny</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>104</td><td>vigorous</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>105</td><td>victory</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>106</td><td>successful</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>107</td><td>was finally able to</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>108</td><td>energized enough</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>109</td><td>felt very good</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>110</td><td>pretty happy</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>111</td><td>without any interrupting</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>112</td><td>have a great</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>113</td><td>feel really good</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>114</td><td>really thorough</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>115</td><td>was really fun</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>116</td><td>in a good mood</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>117</td><td>soothe</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>118</td><td>revitalize</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>119</td><td>was determined</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>120</td><td>doing well</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>121</td><td>sun was shining</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>122</td><td>making progress</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>123</td><td>very energetic</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>124</td><td>exhilarate</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>125</td><td>a hit</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>126</td><td>just in time</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>127</td><td>looked good</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>128</td><td>pretty</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>129</td><td>strengthen</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>130</td><td>pleasant</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>131</td><td>thoroughly enjoyed</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>132</td><td>pretty decent</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>133</td><td>not pass out</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>134</td><td>for fun</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>135</td><td>confidant</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>136</td><td>is a great</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>137</td><td>achievement</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>138</td><td>getting my act together</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>139</td><td>flexible</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>140</td><td>reward</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>141</td><td>problems fall</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>142</td><td>without guilt</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>143</td><td>very positive</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>144</td><td>really easy</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>145</td><td>really appreciated</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>146</td><td>delight</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>147</td><td>extremely happy</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>148</td><td>a lot of fun</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>149</td><td>genuinely</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>150</td><td>high-energy</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>151</td><td>generate</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>152</td><td>pleased</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>153</td><td>safely</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>154</td><td>felt okay</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>155</td><td>some great</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>156</td><td>kept up with</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>157</td><td>made some progress</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>158</td><td>so beneficial</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>159</td><td>more about taking care of</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>160</td><td>reduction in pain</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>161</td><td>feel happy and good</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>162</td><td>free from</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>163</td><td>relief</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>164</td><td>lose 20 pounds</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>165</td><td>really love</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>166</td><td>feel very good</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>167</td><td>fulfill</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>168</td><td>reduce my stress</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>169</td><td>qualify</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>170</td><td>without having to worry about</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>171</td><td>very helpful</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>172</td><td>really energized</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>173</td><td>always enjoy</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>174</td><td>great day</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>175</td><td>without pain</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>176</td><td>been stuck</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>177</td><td>heal</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>178</td><td>how good</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>179</td><td>solid</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>180</td><td>did the best</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>181</td><td>efficiently</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>182</td><td>felt good enough</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>183</td><td>less tired</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>184</td><td>very well</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>185</td><td>lots of fun</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>186</td><td>ace</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>187</td><td>without any fear</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>188</td><td>lose a little weight</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>189</td><td>lost four pounds</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>190</td><td>got to know</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>191</td><td>always feels good</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>192</td><td>compliments</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>193</td><td>really productive</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>194</td><td>really enjoy</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>195</td><td>talented</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>196</td><td>for the better</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>197</td><td>really vigorous</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>198</td><td>above and beyond</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>199</td><td>without being winded</td><td>1<td></td><td></td><td></td></tr>
+<tr><td>200</td><td>really satisfying</td><td>1<td></td><td></td><td></td></tr>
+
+    </table>
+    
+        <h3>Topics and Entities</h3>
+            <table class="sums">
+<tr><th>Entities</th><th>Topics</th></tr>
+<tr><td><ul><li>Happiness Advantage: 4</li><li>Learnt Pranayama: 1</li><li>Yoga Class: 1</li><li>Surya Namaskar: 1</li><li>High Intensity Interval Training: 1</li><li>Broad Street Run: 1</li><li>Orange Theory: 1</li></ul></td><td><ul><li>good workout: 48</li><li>first time: 42</li><li>great workout: 36</li><li>gym today: 18</li><li>last night: 16</li><li>yoga class: 12</li><li>mile bike ride: 11</li><li>long time: 10</li><li>last week: 9</li><li>long run: 8</li><li>bike ride: 8</li><li>gym yesterday: 8</li><li>mile walk: 8</li><li>bench press: 6</li><li>gym membership: 6</li><li>last month: 6</li><li>new gym: 6</li><li>long walk: 5</li><li>good run: 5</li><li>intense workout: 5</li><li>miles today: 5</li><li>great run: 5</li><li>hard workout: 5</li><li>local gym: 4</li><li>new personal record: 4</li><li>good time: 4</li><li>early morning: 4</li><li>great day: 4</li><li>good exercise: 4</li><li>sunny day: 4</li><li>morning before work: 4</li><li>new personal: 4</li><li>minute mile: 4</li><li>profound effect: 4</li><li>effective strategy: 4</li><li>groups of patients: 4</li><li>workout routine: 4</li><li>great workout yesterday: 3</li><li>nice workout: 3</li><li>good workout today: 3</li><li>great work: 3</li><li>long bike ride: 3</li><li>good workout yesterday: 3</li><li>nice run: 3</li><li>gym to workout: 3</li><li>run yesterday: 3</li><li>personal trainer: 3</li><li>exercise goal: 3</li><li>mile race: 3</li><li>other day: 3</li><li>hard work: 3</li><li>great time: 3</li><li>fitness goal: 2</li><li>tough workout: 2</li><li>lunch break: 2</li><li>mile ride: 2</li><li>minutes today: 2</li><li>good session: 2</li><li>exercise bike: 2</li><li>long distance: 2</li><li>real early: 2</li><li>exercise routine: 2</li><li>gym after work: 2</li><li>satisfying workout: 2</li><li>yoga today: 2</li><li>workout yesterday morning: 2</li><li>couple weeks: 2</li><li>run yesterday morning: 2</li><li>meditation class: 2</li><li>weight loss: 2</li><li>favorite teacher: 2</li><li>good sweat: 2</li><li>mile road bike: 2</li><li>long jog: 2</li><li>leg day: 2</li><li>really fun: 2</li><li>new workout: 2</li><li>workout video: 2</li><li>gym progress: 2</li><li>good jog: 2</li><li>yesterday afternoon: 2</li><li>mile run: 2</li><li>gym before work: 2</li><li>run after work: 2</li><li>hours today: 2</li><li>day yoga class: 2</li><li>few months: 2</li><li>first day: 2</li><li>great workout today: 2</li><li>new exercise: 2</li><li>normal workout routine: 2</li><li>achoras book: 2</li><li>difficult workout: 2</li><li>time in months: 2</li><li>ride yesterday: 2</li><li>few weeks: 2</li><li>whole week: 2</li><li>achor's book: 2</li><li>daily exercise: 2</li><li>beautiful day: 2</li><li>happy and proud: 2</li><li>cold water: 2</li></ul></td></tr>
+<tr><th>Mentions</th><th>Hashtags</th></tr>
+<tr><td><ul></ul></td><td><ul></ul></td></tr>
+</table>
+
+        <h3>Text Metrics</h3>
+            <table class="sums">
+<tr><th>Sentences</th><th>Single Words</th><th>Multiword Expressions</th><th>Lexical words</th><th>Function Words</th></tr>
+<tr><td>1106</td><td>5857</td><td>554</td><td>0</td><td>7487</td></tr>
+<tr><th>Adjectives</th><th>Common Nouns</th><th>Proper Nouns</th><th>Verbs</th><th>Numerals</th></tr>
+<tr><td>948</td><td>3185</td><td>69</td><td>2860</td><td>253</td></tr>
+<tr><th>Tokens</th><th>Type/Token Ratio</th><th>ALL-CAPS Words</th><th>Reduplications</th><th>Emojis</th></tr>
+<tr><td>14692</td><td>0.094</td><td>1324</td><td>3</td><td>0</td></tr>
+<tr><th>Mentions</th><th>Hashtags</th><th>URLs</th><th>Exclamation Marks</th><th>Question Marks</th></tr>
+<tr><td>0</td><td>0</td><td>0</td><td>41</td><td>0</td></tr>
+</table>
+
+        <h3>Text Representation</h3>
+            <p> I went to the gym this morning and did yoga.</p>
+<p> I completed my 5 miles run without break.</p>
+<p> It makes me feel strong.</p>
+<p> Going for some running and exercising after three days break.</p>
+<p id="ppos"> I went to sports club and did running and exercise that is why I feel <mark style="background-color:#6DFE00;">very fresh</mark> and <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p> Its the little things, when I went to the gym today to do squats and other leg lifts, the power-cage was open all afternoon.</p>
+<p> I run run run and run, finally i catch a bus disappearing form my eyes.</p>
+<p id="ppos"> Its make me feel <mark style="background-color:#6DFE00;">nice</mark>.</p>
+<p id="ppos"> i have run for 6 miles and the feeling <mark style="background-color:#6DFE00;">is great</mark>.</p>
+<p> I went for a long run on a trail near my house.</p>
+<p> I went to my local gym to lift weight and do cardio.</p>
+<p id="ppos"> The shower afterwards was <mark style="background-color:#6DFE00;">refreshing</mark>.</p>
+<p id="ppos"> I finally went for a run and worked out and it <mark style="background-color:#6DFE00;">felt great</mark> to be <mark style="background-color:#6DFE00;">taking care of</mark> my body.</p>
+<p> I went to the gym.</p>
+<p id="ppos"> I completed a <mark style="background-color:#6DFE00;">fitness</mark> goal this morning that I had set for myself a while ago; run a full mile before going to work.</p>
+<p id="ppos"> I had a really tough workout in the morning, and I <mark style="background-color:#6DFE00;">managed to</mark> complete it while running incredibly quickly!</p>
+<p id="ppos"> I went for a 2 hour run that made me <mark style="background-color:#6DFE00;">feel great</mark>.</p>
+<p id="ppos"> I can feel myself getting in better shape and that makes me <mark style="background-color:#6DFE00;">feel good</mark>.</p>
+<p> I went to the gym today and was about to run for 30 minutes straight.</p>
+<p id="ppos"> Going to the gym during my lunch break made me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> run for 5 miles.</p>
+<p> This is the most I have ever done.</p>
+<p id="ppos"> I got to go to yoga and <mark style="background-color:#6DFE00;">relax</mark> for an hour.</p>
+<p> I went for a jog.</p>
+<p id="ppos"> I went to the gym and <mark style="background-color:#6DFE00;">was able to</mark> bench press 315 lbs.</p>
+<p> I ran this morning for 4 miles, usually I only go for 2 miles, but I pushed myself today to see how far I could go.</p>
+<p id="ppos"> I went to the gym and <mark style="background-color:#6DFE00;">really enjoyed</mark> <mark style="background-color:#6DFE00;">how awesome</mark> my workout was afterwards.</p>
+<p id="ppos"> I went to the gym and felt <mark style="background-color:#6DFE00;">proud</mark> of myself after.</p>
+<p> I worked out at the gym and got a lot done during it.</p>
+<p id="ppos"> I went outside to see if it was <mark style="background-color:#6DFE00;">warm</mark> <mark style="background-color:#6DFE00;">enough for</mark> a bike ride... it was so i went for a three mile ride.</p>
+<p id="ppos"> never rode that far in one session and i was <mark style="background-color:#6DFE00;">happy</mark> i did.</p>
+<p id="ppos"> <mark style="background-color:#6DFE00;">good</mark> excercise.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout at the gym.</p>
+<p> I went to the gym and exercised on the elliptical and lifted weights after work.</p>
+<p> I ran a mile under 6 minutes today and it made me feel fast.</p>
+<p> I went to the gym and ran for 20 minutes.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout at the gym yesterday.</p>
+<p id="ppos"> I did yoga yesterday which <mark style="background-color:#6DFE00;">relaxed</mark> me and allowed me to stretch my body.</p>
+<p id="ppos"> This <mark style="background-color:#6DFE00;">helped</mark> me feel <mark style="background-color:#6DFE00;">more positive</mark> throughout the day.</p>
+<p> I went to the gym.</p>
+<p id="ppos"> Hitting a new personal record on the bench press made me <mark style="background-color:#6DFE00;">more confident</mark> in my abilities.</p>
+<p> I went to the gym to lift weights.</p>
+<p id="ppos"> I finished my workout this morning and felt <mark style="background-color:#6DFE00;">energized</mark>.</p>
+<p id="pneg"> I went for a run and <mark style="background-color:#FF8B8B;">broke</mark> my personal best for a 5k time.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> when I got to go to back to the gym.</p>
+<p id="ppos"> I went to the gym and had a <mark style="background-color:#6DFE00;">good</mark> workout.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout this morning.</p>
+<p id="ppos"> When I <mark style="background-color:#6DFE00;">was able to</mark> have a <mark style="background-color:#6DFE00;">good</mark> workout with my past teammates.</p>
+<p> Staying at home after going to the gym and being alone.</p>
+<p> I went to the gym in the morning.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout on a treadmill this morning at the gym.</p>
+<p> I went for a run with my dog in the morning.</p>
+<p id="ppos"> Felt <mark style="background-color:#6DFE00;">pretty energized</mark> for work after it.</p>
+<p> My boyfriend brought my gym clothes to me so that I could go the the gym right after work.</p>
+<p> I went to the gym and completed a two hour long workout.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> session at the gym.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">energetic</mark> afterwards.</p>
+<p> I exercised on my exercise bike.</p>
+<p> I went to the gym for the first time in 6 months.</p>
+<p id="ppos"> I ran quite a long distance with <mark style="background-color:#6DFE00;">good</mark> weather.</p>
+<p> I woke up early this morning on time to do yoga and actually did it.</p>
+<p> I met my goal of going to the gym twice this week.</p>
+<p> Going for a run at the gym.</p>
+<p> I completed a goal that I set for myself at the gym and it pumped me up for tomorrow.</p>
+<p id="ppos"> It <mark style="background-color:#6DFE00;">felt good</mark> to hit the gym and then come home and notice that I'd been making results.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> go to the gym.</p>
+<p> Walking outside exercising.</p>
+<p> I went to the gym and rowed.</p>
+<p> I went running.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">motivated</mark> myself to workout for the first time in awhile.</p>
+<p> My run went well this morning.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a good time</mark> and I saw deer in the park.</p>
+<p> I went out for a long walk.</p>
+<p> I went for a run around the block.</p>
+<p> i went to the gym.</p>
+<p id="pneg"> I ran on the treadmill for an entire hour and did not feel <mark style="background-color:#FF8B8B;">winded</mark> or <mark style="background-color:#FF8B8B;">overly exhausted</mark>.</p>
+<p> I actually had time today to do a workout for 30 minutes.</p>
+<p> Went for a jog around my neighborhood in the early morning.</p>
+<p id="ppos"> It <mark style="background-color:#6DFE00;">felt great</mark> to witness the sun rise as I finished.</p>
+<p> I went to the gym almost everyday this month.</p>
+<p> My goal is to go at least 5 times a week and spend at least 40 minutes lifting weights or doing cardio.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">feel great</mark> when I achieve my goal.</p>
+<p> I have been running a lot more.</p>
+<p id="pneg"> When my thighs started to <mark style="background-color:#FF8B8B;">shrink from</mark> a low protein diet.</p>
+<p> I ate low carb and worked out hard 7 days a week 2 hours a day.</p>
+<p id="ppos"> I ended up super skinny except with a big butt and thighs( <mark style="background-color:#6DFE00;">athletic</mark>).</p>
+<p id="ppos"> I look <mark style="background-color:#6DFE00;">funny</mark> though because I am extremely, extremely thin on top and a size 6 or 8 on the bottom.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> run 9 miles without stopping even though I had not run all winter.</p>
+<p> going to the gym.</p>
+<p id="ppos"> i went to a yoga camp conducted by an organisation and the place where it conducted itself provides a <mark style="background-color:#6DFE00;">refreshing</mark> feeling and after the yoga session felt <mark style="background-color:#6DFE00;">very happy</mark> some newness.</p>
+<p id="ppos"> I did some <mark style="background-color:#6DFE00;">vigorous</mark> exercise today, which recharged me.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> day at the climbing gym and really toasted all of my muscles.</p>
+<p> The fact that I have found time to start exercising again on a frequent basis.</p>
+<p> I finally completed 100 push-ups and 70 squat-ups.</p>
+<p> I got up this morning a went for a 3 mile run outside.</p>
+<p> When I actually got up and did a full exercise routine this morning.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> when I completed my Yoga workout last night.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> get my workout in on a very busy day.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> go to the gym even though I was <mark style="background-color:#FF8B8B;">tired</mark> and I felt it was a <mark style="background-color:#6DFE00;">victory</mark>.</p>
+<p id="ppos"> I went on a long and <mark style="background-color:#6DFE00;">successful</mark> run.</p>
+<p> Getting in a really big workout.</p>
+<p> Morning jogging.</p>
+<p> Getting to do yoga unexpectedly.</p>
+<p> I worked out for an hour.</p>
+<p> Today I went to the gym with someone I'd never been to the gym with before.</p>
+<p id="ppos"> We <mark style="background-color:#6DFE00;">had fun</mark> working out together.</p>
+<p id="ppos"> I remember that I <mark style="background-color:#6DFE00;">was finally able to</mark> exercise at a gym.</p>
+<p id="ppos"> I meditated and <mark style="background-color:#6DFE00;">was able to</mark> focus on my breathing.</p>
+<p id="ppos"> Yesterday I <mark style="background-color:#6DFE00;">was able to</mark> do 25 minutes of cardio.</p>
+<p id="pneg"> I got up real early in the morning and did not feel <mark style="background-color:#FF8B8B;">tired</mark> for a change and went and worked out.</p>
+<p> I started the day yesterday morning by warming up with an exercise routine called Classical Stretch.</p>
+<p id="ppos"> I'd been <mark style="background-color:#FF8B8B;">sick</mark> for over a week and this was the first morning I felt <mark style="background-color:#6DFE00;">energized enough</mark> to exercise.</p>
+<p id="ppos"> <mark style="background-color:#6DFE00;">Felt very good</mark> and I felt <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> go to the gym for the first time in a while yesterday, which always makes me feel <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p> I found time in my schedule to workout.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout yesterday!</p>
+<p id="ppos"> It took longer than normal, but I <mark style="background-color:#6DFE00;">felt great</mark> afterward.</p>
+<p id="ppos"> I went on a <mark style="background-color:#6DFE00;">really good</mark> run.</p>
+<p> I ran four miles at the gym after work.</p>
+<p id="ppos"> I ran four miles this morning with a <mark style="background-color:#6DFE00;">good time</mark>.</p>
+<p> I learned I can take special classes with my gym membership I did not think I could take.</p>
+<p> I walked over 2 miles yesterday.</p>
+<p> I hit a new PR in the gym.</p>
+<p> I worked out at the gym.</p>
+<p id="ppos"> i was <mark style="background-color:#6DFE00;">happy</mark> that i <mark style="background-color:#6DFE00;">was able to</mark> have <mark style="background-color:#6DFE00;">good</mark> exercise at the gym.</p>
+<p> I went running at the gym!</p>
+<p> I completed a 3 mile walk in under an hour.</p>
+<p> I did a personal training session at the gym that made me feel very strong and fit!</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">really nice</mark> workout after going up in weight on all of my lifts.</p>
+<p> I went for a jog.</p>
+<p> I did not think I was ever going to be able to run again and I did not run for very long, but I was still able to do it and hope that I can continue.</p>
+<p> i had an intense workout.</p>
+<p> I went to the gym even though I had planned to take the evening off.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">satisfying</mark> workout.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> workout today with plenty of excercises.</p>
+<p> skipped the gym.</p>
+<p id="ppos"> Going for a run made me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p id="ppos"> when I <mark style="background-color:#6DFE00;">was able to</mark> gain more muscle in my arms after working out in the gym.</p>
+<p> I went to the gym after a long day.</p>
+<p> I went to Yoga and Meditaion class.</p>
+<p> When I was jogging in the park.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">managed to</mark> run for 5 miles today.</p>
+<p id="ppos"> I was working out yesterday and after the workout I was <mark style="background-color:#6DFE00;">pretty happy</mark>.</p>
+<p id="ppos"> GOt time to workout alone <mark style="background-color:#6DFE00;">without any interrupting</mark>.</p>
+<p> I went to yoga class.</p>
+<p> Attended Yoga classes in the morning.</p>
+<p> Learnt Pranayama.</p>
+<p id="ppos"> When I went for a run early this morning, everything was quiet and I <mark style="background-color:#6DFE00;">felt great</mark> afterwards.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> workout, one that if felt hurt me good.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> yoga session this evening.</p>
+<p id="pneg"> I completed a bodypump workout that I found too <mark style="background-color:#FF8B8B;">difficult</mark> last week.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> run.</p>
+<p id="ppos"> Got some <mark style="background-color:#6DFE00;">good</mark> exercising.</p>
+<p> I took a 5 mile bike ride.</p>
+<p> I finished the Fool's Run 10K in 46:45 this morning.</p>
+<p id="ppos"> I went to the gym to train and my trainer <mark style="background-color:#6DFE00;">complimented</mark> me.</p>
+<p> I went on a run in the woods.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> <mark style="background-color:#6DFE00;">have a great</mark> work out at the gym.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">feel really good</mark>.</p>
+<p> I participated in a yoga class that left me feeling string, centered, and connected.</p>
+<p id="ppos"> Getting in a <mark style="background-color:#6DFE00;">good</mark> workout made me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p> When I finished a 3 mile run.</p>
+<p> I ran 4 miles at the park.</p>
+<p> I went on a long bike ride, about 22 miles, while I listened to music.</p>
+<p> Feeling myself get stronger at yoga today because I have been doing it more often lately.</p>
+<p> I got to go to the gym and exercise.</p>
+<p> I went to the gym and saw the guy that gives me butterflies every time I see him.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> exercise by playing tennis and basketball.</p>
+<p> This morning I ran the mile for the first time this year.</p>
+<p id="ppos"> After running the mile I <mark style="background-color:#6DFE00;">felt great</mark>, and I was <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p id="pneg"> But soon after I started to <mark style="background-color:#FF8B8B;">get tired</mark>, and knew that I was going to <mark style="background-color:#FF8B8B;">ache</mark> later.</p>
+<p> I went to Yoga Class.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> workout yesterday morning.</p>
+<p> Started to workout again.</p>
+<p id="ppos"> It <mark style="background-color:#FF8B8B;">hurts</mark> a bit but finally some <mark style="background-color:#6DFE00;">progress</mark>.</p>
+<p id="ppos"> I went for a bike ride in the <mark style="background-color:#6DFE00;">sunshine</mark>.</p>
+<p> Completed 5 six pack exercise routines today i am getting stronger and lighter.</p>
+<p> I went to zumba class at my gym.</p>
+<p id="ppos"> I went to the gym and had a <mark style="background-color:#6DFE00;">good</mark> workout for about an hour and it made me <mark style="background-color:#6DFE00;">felt good</mark>.</p>
+<p id="ppos"> I did a <mark style="background-color:#6DFE00;">good</mark> workout at the gym that was <mark style="background-color:#6DFE00;">really thorough</mark>.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">love</mark> play Soccer with my Friends in the Stadium.</p>
+<p> Doing some yoga in the morning.</p>
+<p> I went to the gym and worked out.</p>
+<p id="ppos"> Did a 2hr run in thw snow but with <mark style="background-color:#6DFE00;">amazing</mark> weather that has warmed up a little, I made my own path and thought it <mark style="background-color:#6DFE00;">was really fun</mark> just running wherever I wanted.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout at the gym.</p>
+<p id="ppos"> I went on a run for the first time in 2 weeks, and the <mark style="background-color:#6DFE00;">sunny</mark> weather during my run put me <mark style="background-color:#6DFE00;">in a good mood</mark>.</p>
+<p> I went for a great run in the cold weather.</p>
+<p id="ppos"> I got a <mark style="background-color:#6DFE00;">nice</mark> workout in!</p>
+<p> I went swimming at a local YMCA.</p>
+<p> I daily walk in the evening but probably after 6 months today I went for a morning walk.</p>
+<p> Working out at the gym with only a few other people there.</p>
+<p> I went for a long distance run.</p>
+<p> I started to walk as a exercise everyday.</p>
+<p> Going for a run.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">refreshing</mark> <mark style="background-color:#6DFE00;">soothing</mark> shower after the gym.</p>
+<p id="ppos"> I decided to start going back to the gym to <mark style="background-color:#6DFE00;">lose weight</mark>.</p>
+<p id="ppos"> had a <mark style="background-color:#6DFE00;">nice</mark> and <mark style="background-color:#6DFE00;">revitalizing</mark> workout.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout yesterday that lasted a little over two hours, leaving me feeling <mark style="background-color:#6DFE00;">awesome</mark>.</p>
+<p> I went to the gym after a couple weeks of not going.</p>
+<p> Doing yoga in the morning.</p>
+<p id="ppos"> i got in a <mark style="background-color:#6DFE00;">really good</mark> leg workout, and realized that i can still jump pretty well.</p>
+<p id="ppos"> It was bright and <mark style="background-color:#6DFE00;">sunny</mark> on a run I did this morning.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> run 2 miles on my morning run <mark style="background-color:#FF8B8B;">without taking a break</mark>.</p>
+<p id="ppos"> I went on a five-mile run on a <mark style="background-color:#6DFE00;">sunny</mark> day( today).</p>
+<p> Took the dogs for a walk.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> walk two miles today, which I have not been able to do in a long while.</p>
+<p> I went for a 3.</p>
+<p id="ppos"> 5 mile run through the park on a <mark style="background-color:#6DFE00;">sunny</mark> day.</p>
+<p id="ppos"> I went for a run this morning and <mark style="background-color:#6DFE00;">felt good</mark>.</p>
+<p> I worked up to 2 miles on my morning jog.</p>
+<p> I went to hot yoga today.</p>
+<p id="ppos"> I have not exercised in a while and have not felt <mark style="background-color:#6DFE00;">motivated</mark> to work out but I <mark style="background-color:#6DFE00;">was determined</mark> to go today and through it was hard and I had to take several rests I am <mark style="background-color:#6DFE00;">so happy</mark> I went!</p>
+<p id="ppos"> It <mark style="background-color:#6DFE00;">felt so good</mark> and my body and my mind feel <mark style="background-color:#6DFE00;">refreshed</mark>!</p>
+<p> Such an infusion of energy!</p>
+<p id="ppos"> I went to a yoga class for the first time since last month and it was <mark style="background-color:#6DFE00;">fantastic</mark> and <mark style="background-color:#6DFE00;">relaxing</mark>.</p>
+<p id="ppos"> I have been watching my weight and have been <mark style="background-color:#6DFE00;">doing well</mark> with exercising, so today I treated myself to a jelly doughnut.</p>
+<p> I went to gym this morning and beat my personal mile run time on the treadmill.</p>
+<p> I went for a run along the river.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> after I finished my workout because I felt accomplished.</p>
+<p id="ppos"> going for an hour run in this <mark style="background-color:#6DFE00;">nice</mark> weather today.</p>
+<p> I did not plan on going to the gym today, but I ran on the treadmill for about half an hour.</p>
+<p> Doing yoga in the evening.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">really good</mark> workout this morning.</p>
+<p id="ppos"> I went on a <mark style="background-color:#6DFE00;">nice</mark> run outside.</p>
+<p> I went to a yoga class.</p>
+<p> went for bike ride.</p>
+<p> While on a hike, had an incredible view of the entire city.</p>
+<p> Passed my CPR training yesterday.</p>
+<p id="ppos"> The <mark style="background-color:#6DFE00;">sun was shining</mark> when I went for my long run yesterday morning.</p>
+<p id="ppos"> Having a <mark style="background-color:#6DFE00;">good</mark> workout at the gym.</p>
+<p id="ppos"> I felt <mark style="background-color:#6DFE00;">happy</mark> leaving the gym after doing cardio this morning.</p>
+<p> I did my longest run yet 25 minutes.</p>
+<p> I went to yoga.</p>
+<p id="ppos"> Tonight I went to the gym, this made me <mark style="background-color:#6DFE00;">happy</mark> because working out and being at the gym makes me <mark style="background-color:#6DFE00;">feel good</mark> about myself.</p>
+<p> Exercising for more than 40 minutes with the stationary bike and an elliptical.</p>
+<p> I started doing exercise again, after a break of 2 months.</p>
+<p> Went to the gym.</p>
+<p id="ppos"> I went to Yoga and <mark style="background-color:#6DFE00;">Meditation</mark> class.</p>
+<p id="ppos"> I went to the gym and had a <mark style="background-color:#6DFE00;">good</mark> workout and the weather was <mark style="background-color:#6DFE00;">perfect</mark>.</p>
+<p> Yesterday, I woke up and went to the gym to exercise.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> workout.</p>
+<p> Attended Yoga classes in the morning.</p>
+<p> Learnt about Surya Namaskar.</p>
+<p> I set a new personal record at the gym.</p>
+<p id="ppos"> While at the park I <mark style="background-color:#6DFE00;">was able to</mark> get a <mark style="background-color:#6DFE00;">nice</mark> workout in, which made me <mark style="background-color:#6DFE00;">feel better</mark> about myself.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> workout at the gym where I <mark style="background-color:#6DFE00;">was able to</mark> meet my goals.</p>
+<p> I did yoga this morning to try to make my back and neck more limber.</p>
+<p> I went to the gym and ran 2 miles today.</p>
+<p id="pneg"> I worked out and I had more energy after my workout than towards the start of my workout since I was <mark style="background-color:#FF8B8B;">dreading</mark> the workout.</p>
+<p id="ppos"> Doing my evening workout and <mark style="background-color:#6DFE00;">making progress</mark> with weight loss.</p>
+<p id="pneg"> being able to go to the gym after having been <mark style="background-color:#FF8B8B;">sick</mark> for a week and not being able to work out.</p>
+<p> working out longer than an hour at the gym.</p>
+<p id="ppos"> I went for a run today in the sun and felt <mark style="background-color:#6DFE00;">very energetic</mark> and <mark style="background-color:#6DFE00;">exhilarated</mark>.</p>
+<p> I got in a great workout after work.</p>
+<p id="ppos"> I went to my yoga class that I had not been to in a while and saw my <mark style="background-color:#6DFE00;">favorite</mark> teacher.</p>
+<p id="ppos"> Yesterday i attended one hour yoga class program and i was <mark style="background-color:#6DFE00;">very happy</mark> to know how to do yoga <mark style="background-color:#6DFE00;">properly</mark>.</p>
+<p> I took myself on a long hike.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> to get a <mark style="background-color:#6DFE00;">good</mark> workout in today.</p>
+<p id="ppos"> I went to the gym <mark style="background-color:#6DFE00;">a hit</mark> multiple personal records.</p>
+<p> I went to the gym together and worked out for 2 hours on cardio.</p>
+<p id="ppos"> Going to the gym to work out made me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p> Getting a full boxing workout today.</p>
+<p id="ppos"> I worked out a <mark style="background-color:#6DFE00;">good</mark> sweat and I was <mark style="background-color:#6DFE00;">glad</mark> that I finished it despite <mark style="background-color:#FF8B8B;">procrastinating</mark>.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout at the gym and I overhead pressed an extra ten pounds then last week.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">really good</mark> workout.</p>
+<p id="ppos"> I got a <mark style="background-color:#6DFE00;">good</mark> workout in this morning.</p>
+<p id="pneg"> I went to workout today for the first time in 3 months, after my workout i ran on the track and became <mark style="background-color:#FF8B8B;">very tired</mark> and stopped running.</p>
+<p id="pneg"> Then i pushed myself to keep on walking for the rest of the mile even though i was already <mark style="background-color:#FF8B8B;">exhausted</mark>.</p>
+<p id="ppos"> <mark style="background-color:#6DFE00;">Satisfying</mark> and fast training run on a <mark style="background-color:#6DFE00;">beautiful</mark> <mark style="background-color:#6DFE00;">cool</mark> spring evening.</p>
+<p id="ppos"> Last night I <mark style="background-color:#6DFE00;">was able to</mark> walk a mile with little to <mark style="background-color:#6DFE00;">no fatigue</mark>.</p>
+<p> I went for a run in the park, then did some calisthenics exercises.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout last night and <mark style="background-color:#6DFE00;">feel great</mark> about my level of effort.</p>
+<p id="ppos"> I completed a 37 mile road bike ride with an <mark style="background-color:#6DFE00;">awesome</mark> average speed.</p>
+<p> I went to the gym.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> work out and <mark style="background-color:#6DFE00;">felt amazing</mark> after.</p>
+<p id="ppos"> I worked out for almost two hours and it was <mark style="background-color:#FF8B8B;">very stress</mark> <mark style="background-color:#6DFE00;">free</mark> great feeling.</p>
+<p id="ppos"> I took my dogs out for a walk and they were <mark style="background-color:#6DFE00;">so happy</mark> to be outside running around and the exercise made me <mark style="background-color:#6DFE00;">feel good</mark>.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">very good</mark> workout.</p>
+<p> Yesterday I ran 4 miles while blasting my new Ipod Shuffle that I got for Christmas.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">enjoy</mark> working out, but was <mark style="background-color:#FF8B8B;">really tired</mark> yesterday and did not want to do anything.</p>
+<p id="pneg"> I made myself get up, get out and get running and though I was <mark style="background-color:#FF8B8B;">very tired</mark> and <mark style="background-color:#FF8B8B;">sluggish</mark> starting, my music quickly got me in the mood and I knocked a whole minute and a half off my pace time.</p>
+<p id="ppos"> It made me feel <mark style="background-color:#6DFE00;">wonderful</mark>, especially since I am training for a 5K coming up the beginning of May.</p>
+<p> Today, I got out of work early so, I went for a long jog.</p>
+<p id="ppos"> I went running this morning before it rained and it was a <mark style="background-color:#6DFE00;">good</mark> workout.</p>
+<p> I went to the gym and got in a great workout.</p>
+<p id="ppos"> Tonight I left the gym <mark style="background-color:#6DFE00;">just in time</mark> to avoid the rain.</p>
+<p id="ppos"> i <mark style="background-color:#6DFE00;">was able to</mark> get some <mark style="background-color:#6DFE00;">decent</mark> exercise in today.</p>
+<p id="ppos"> I went to the gym and in the mirror reflection I think I <mark style="background-color:#6DFE00;">looked good</mark>.</p>
+<p id="ppos"> I had an <mark style="background-color:#6DFE00;">excellent</mark> workout at the gym, it was leg day and I <mark style="background-color:#6DFE00;">love</mark> leg day!</p>
+<p> Ran my workout in a record time.</p>
+<p id="ppos"> I went on a 5mi run through a <mark style="background-color:#6DFE00;">pretty</mark> neighborhood.</p>
+<p> I found a really fun new workout video that I wi will be incorporating into my weekly exercise routine.</p>
+<p id="ppos"> I worked out at the gym for almost an hour and did both cardio and circuit <mark style="background-color:#6DFE00;">strength</mark> training.</p>
+<p> I went for a run for the first time in a long time.</p>
+<p> I worked out.</p>
+<p> I went jogging to the park.</p>
+<p> I worked out at the gym for over an hour.</p>
+<p> Going to the gym and working out.</p>
+<p> we played beach volleyball.</p>
+<p> i worked out.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> workout.</p>
+<p> I walked two miles today.</p>
+<p> I was at the gym today and hit a new personal squat record!</p>
+<p id="ppos"> It made me <mark style="background-color:#6DFE00;">happy</mark> because I have been tracking my gym <mark style="background-color:#6DFE00;">progress</mark> and it is <mark style="background-color:#6DFE00;">nice</mark> to see results.</p>
+<p> I meditated when I woke up this morning.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> when I did a exercise this morning.</p>
+<p> went to the gym.</p>
+<p> I worked out today.</p>
+<p id="ppos"> My puppy and I went for a <mark style="background-color:#6DFE00;">really nice</mark> 3 mile walk this morning.</p>
+<p id="ppos"> I went for a <mark style="background-color:#6DFE00;">good</mark> jog when it was getting <mark style="background-color:#6DFE00;">cool</mark> out.</p>
+<p id="ppos"> Today was my second day of going for a walk( in a row) because I am trying to be more active and get <mark style="background-color:#6DFE00;">in shape</mark> and I <mark style="background-color:#6DFE00;">felt pretty good</mark> about that.</p>
+<p> I ran 5 miles.</p>
+<p> Running 2 miles at the gym.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">perfect</mark> post-workout protein shake.</p>
+<p> i went to yoga.</p>
+<p> started doing Yoga from today.</p>
+<p id="ppos"> I do not really care for exercising, but I do it because I feel like I should and after I finished my exercising for today, I was <mark style="background-color:#6DFE00;">happy</mark> because I was done and <mark style="background-color:#6DFE00;">satisfied</mark> with myself for having done it, no matter how much I <mark style="background-color:#FF8B8B;">procrastinated</mark> about doing it.</p>
+<p> I took one of my dogs on a mile run at the park.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">very happy</mark> after completing my exercise routine.</p>
+<p id="ppos"> My legs are feeling stronger and I have more energy to complete more repetitions of my <mark style="background-color:#6DFE00;">strengthening</mark> program.</p>
+<p> start jogging in the morning.</p>
+<p id="ppos"> Going to the gym made me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> when I woke up early today and could spend more time at the gym.</p>
+<p id="ppos"> I exercised at today morning it made me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p id="ppos"> God <mark style="background-color:#6DFE00;">is great</mark>; I woke up this morning, alive and <mark style="background-color:#6DFE00;">healthy</mark>, with no muscle <mark style="background-color:#FF8B8B;">soreness</mark> from yesterday's workout!</p>
+<p> going to jogging in the morning with my pet.</p>
+<p> Today I started yoga practice.</p>
+<p id="ppos"> I went to my <mark style="background-color:#6DFE00;">favorite</mark> gym to workout with cardio machines.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> walk 1.</p>
+<p id="ppos"> 37 miles with little to <mark style="background-color:#6DFE00;">no fatigue</mark>.</p>
+<p id="ppos"> I went to the gym last night, which always makes me <mark style="background-color:#6DFE00;">feel better</mark>.</p>
+<p> I went for an early morning walk.</p>
+<p id="ppos"> I ran 11 miles outside along a river while listening to a <mark style="background-color:#6DFE00;">really good</mark> podcast.</p>
+<p id="ppos"> Going to the gym and having a <mark style="background-color:#6DFE00;">really good</mark> workout.</p>
+<p> I hit a new PR on shoulders at the gym.</p>
+<p> I finished a 9.</p>
+<p> 3 mile run yesterday afternoon.</p>
+<p id="ppos"> The breeze coming off the river was <mark style="background-color:#6DFE00;">pleasant</mark>.</p>
+<p> Exercised over lunch break yesterday.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> go on a 3 mile walk before work and finish before it started raining.</p>
+<p> I went for a run.</p>
+<p> I ran 4 miles.</p>
+<p id="ppos"> I finally went to the <mark style="background-color:#6DFE00;">free</mark> weight side of the gym I visit, and used the <mark style="background-color:#6DFE00;">free</mark> weights there.</p>
+<p id="ppos"> I performed well and had <mark style="background-color:#6DFE00;">good</mark> form.</p>
+<p> Going to the gym and working out.</p>
+<p id="ppos"> I went for a bicycle ride after a long time and <mark style="background-color:#6DFE00;">thoroughly enjoyed</mark> the weather and also the exercise I got.</p>
+<p> I went and worked out at the gym.</p>
+<p id="ppos"> I finished my workout at the gym and my muscles felt really tight which means I got a <mark style="background-color:#6DFE00;">really good</mark> workout in.</p>
+<p> I lifted more weight on my bicep workout then I ever had before.</p>
+<p id="ppos"> I am <mark style="background-color:#6DFE00;">happy</mark> that I went for a run yesterday.</p>
+<p id="ppos"> I got to the gym early and <mark style="background-color:#6DFE00;">was able to</mark> get a <mark style="background-color:#6DFE00;">pretty decent</mark> workout.</p>
+<p> Working out yesterday morning.</p>
+<p> I went running in the morning.</p>
+<p id="ppos"> I finished a 20 mile bike ride and did <mark style="background-color:#6DFE00;">not pass out</mark>.</p>
+<p> Getting a great workout in.</p>
+<p> I went for a run this morning in my home state of Maryland.</p>
+<p id="ppos"> I went for a jog in the evening and <mark style="background-color:#6DFE00;">enjoyed</mark> the <mark style="background-color:#6DFE00;">nice</mark> weather.</p>
+<p id="ppos"> Drove for over 10 miles <mark style="background-color:#6DFE00;">for fun</mark>.</p>
+<p> I walked 2 miles on the treadmill.</p>
+<p id="ppos"> <mark style="background-color:#6DFE00;">Enjoyed</mark> lifting weights at the gym.</p>
+<p> Doing 5 reps of 80 pound dumbbells for shoulder press today at the gym.</p>
+<p> Took a 1 hour walk today knowing there is rain in the forecast for Thursday as I wanted to get some exercise while I could.</p>
+<p id="ppos"> I went to gym at morning it made me <mark style="background-color:#6DFE00;">fresh</mark>, <mark style="background-color:#6DFE00;">confidant</mark> and <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p id="ppos"> I went to the gym and did a really hard workout that made me <mark style="background-color:#6DFE00;">feel great</mark> and <mark style="background-color:#6DFE00;">accomplished</mark> afterward.</p>
+<p> When me and my wife worked out at the gym this morning.</p>
+<p id="ppos"> At the beginning of my workout, I <mark style="background-color:#6DFE00;">was able to</mark> perform two muscle-ups in a row.</p>
+<p id="ppos"> It <mark style="background-color:#6DFE00;">is a great</mark> <mark style="background-color:#6DFE00;">achievement</mark> for my personal ability.</p>
+<p> I ran 6 miles.</p>
+<p id="ppos"> I went to the gym and got a crazy muscle pump, I <mark style="background-color:#6DFE00;">felt amazing</mark> after.</p>
+<p id="ppos"> <mark style="background-color:#6DFE00;">Getting my act together</mark> and seeing a personal trainer to get started working out.</p>
+<p> I went to the gym and set a new lifting record.</p>
+<p> Working out at the gym.</p>
+<p> I ran out for cardio early in the morning.</p>
+<p> I played tennis with my son and went to the gym.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> when I went for my jog this morning and found $ 20.</p>
+<p id="ppos"> I went jogging and <mark style="background-color:#6DFE00;">felt great</mark>!</p>
+<p> I worked out by running on the treadmill and lifting some weights.</p>
+<p id="pneg"> My student transitioning well from gym wben its usually <mark style="background-color:#FF8B8B;">a hard time</mark>.</p>
+<p> I went to the stadium and had exercise.</p>
+<p id="ppos"> My body get <mark style="background-color:#6DFE00;">flexible</mark> by doing this exercise.</p>
+<p> I exercised a couple miles today.</p>
+<p> I found $ 100!</p>
+<p> Two $ 50 dollars just lying in the street after I came back from the gym.</p>
+<p id="ppos"> I am <mark style="background-color:#6DFE00;">so happy</mark> I went to the gym and it seems I got a <mark style="background-color:#6DFE00;">reward</mark> from the Universe for doing so!</p>
+<p id="ppos"> I went on a long walk and let some of my <mark style="background-color:#6DFE00;">problems fall</mark> away.</p>
+<p> I went on a 3- mile run outside and then practiced throwing with one of my teammates.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout even though I was hesitant to go.</p>
+<p id="ppos"> I had an <mark style="background-color:#6DFE00;">energizing</mark> morning workout.</p>
+<p id="ppos"> I had <mark style="background-color:#6DFE00;">the best</mark> work out at the gym yesterday.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> skip, <mark style="background-color:#6DFE00;">without guilt</mark>, the early morning gym class that we normally go to every week because the toddler did <mark style="background-color:#FF8B8B;">not feel well</mark>.</p>
+<p> I completed a workout at the gym.</p>
+<p> In the last day I went to the gym to find that it was nearly empty.</p>
+<p> Did not have to weight around for any weights.</p>
+<p> I ran two miles in my fastest time ever.</p>
+<p> Had a two hour workout.</p>
+<p id="ppos"> At the gym, a <mark style="background-color:#6DFE00;">cute</mark> girl winked at me.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">really happy</mark> to receive the attention.</p>
+<p id="ppos"> At lunch I <mark style="background-color:#6DFE00;">was able to</mark> go to the gym and <mark style="background-color:#6DFE00;">was able to</mark> up the weights on all my lifts.</p>
+<p id="ppos"> i <mark style="background-color:#6DFE00;">had a great</mark> run.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> finish my workout and I was <mark style="background-color:#6DFE00;">glad</mark> it was over.</p>
+<p id="ppos"> I went on an intense bike ride and got some <mark style="background-color:#6DFE00;">good</mark> exercise.</p>
+<p id="ppos"> I am <mark style="background-color:#6DFE00;">happy</mark> because I just took back a pokemon go gym that was taken from earlier today.</p>
+<p id="pneg"> I went to the gym and did a lot of weight lifting, I felt <mark style="background-color:#FF8B8B;">tired</mark> but great afterwards.</p>
+<p id="ppos"> <mark style="background-color:#6DFE00;">having a great</mark> workout.</p>
+<p id="ppos"> Purchased a Bicycle for exercising purpose and keep my body <mark style="background-color:#6DFE00;">healthy</mark>.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> wake up early this morning, which allowed me to clean up my apartment and go to the local gym before work.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> go to the gym and work out.</p>
+<p> I took a pilates class at my gym.</p>
+<p id="pneg"> I rode my bicycle up a <mark style="background-color:#FF8B8B;">difficult</mark> hill; though my legs were <mark style="background-color:#FF8B8B;">tired</mark> I reached the peak and went back down.</p>
+<p id="ppos"> the thing that made me <mark style="background-color:#6DFE00;">happy</mark> in the past 24 hours was going to the gym.</p>
+<p> Being able to work out with my personal trainer and a friend.</p>
+<p id="ppos"> This <mark style="background-color:#6DFE00;">motivates</mark> me even more to achieve my goal.</p>
+<p id="pneg"> My body's <mark style="background-color:#FF8B8B;">really sore</mark> after exercising yesterday- a <mark style="background-color:#FF8B8B;">painful</mark> but necessary step towards self-improvement.</p>
+<p> Today I went on a run for the first time in a while.</p>
+<p> i went ot yoga.</p>
+<p> Finally went to the gym after not going for a week.</p>
+<p id="ppos"> I woke up early and went for a run and that <mark style="background-color:#6DFE00;">felt good</mark>.</p>
+<p id="ppos"> I went for a 5 mile run and it was <mark style="background-color:#6DFE00;">nice</mark> to get outside.</p>
+<p id="ppos"> I went to a <mark style="background-color:#6DFE00;">free</mark> yoga class at our local library.</p>
+<p id="ppos"> I went to the gym for the first time in about a week and it <mark style="background-color:#6DFE00;">felt good</mark> to be back.</p>
+<p> I went for a run after work.</p>
+<p id="ppos"> I got a <mark style="background-color:#6DFE00;">good</mark> workout on the morning.</p>
+<p> I exercise in the park.</p>
+<p id="ppos"> I started a new phase of a new workout program I am doing and <mark style="background-color:#6DFE00;">had fun</mark> lifting some heavy weights.</p>
+<p> I went for a jog.</p>
+<p> going to the gym.</p>
+<p> I went for a run.</p>
+<p> Also with the new headphones.</p>
+<p id="ppos"> But the Run <mark style="background-color:#6DFE00;">was amazing</mark> with them.</p>
+<p> I went for a 7 miles run.</p>
+<p id="ppos"> I went to the gym today and I grunted on every rep to show my dominance and a girl <mark style="background-color:#6DFE00;">smiled</mark> at me.</p>
+<p> I exercised for 2 hours today.</p>
+<p> I took a long walk to the library and burned some calories.</p>
+<p id="ppos"> I exercised for longer than usual and <mark style="background-color:#6DFE00;">felt really good</mark> afterwards.</p>
+<p id="ppos"> I went to the gym yesterday and <mark style="background-color:#6DFE00;">had a great</mark> workout and <mark style="background-color:#6DFE00;">felt great</mark> afterwards.</p>
+<p> I was feeling low yesterday morning, and I really did not feel like going to the gym.</p>
+<p id="ppos"> But I did, as I almost always do, and I was <mark style="background-color:#6DFE00;">really happy</mark> I did.</p>
+<p id="pneg"> I sweated out some <mark style="background-color:#FF8B8B;">stress</mark>, and I felt one hundred times better afterward.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">very positive</mark> and hard workout.</p>
+<p> I shoveled the driveway before work and got some extra exercise.</p>
+<p> I did a 30 minute yoga flow this morning before work.</p>
+<p> I went to the gym.</p>
+<p> I decided to walk instead of take the bus so I could get some exercise.</p>
+<p> I went swimming after working out at the gym.</p>
+<p> I lifted my heaviest weights that I have ever lifted before during exercise.</p>
+<p id="ppos"> I went for a run after work and it felt <mark style="background-color:#6DFE00;">really easy</mark> and <mark style="background-color:#6DFE00;">relaxing</mark>.</p>
+<p> went to the gym for the first time in a very long time.</p>
+<p id="ppos"> I went on a run and <mark style="background-color:#6DFE00;">enjoyed</mark> the scenery.</p>
+<p> Returned to my workout routines.</p>
+<p> I went to the gym and I felt really in the groove when I was lifting and running today.</p>
+<p> for the first time in 3 months i was at the gym exercising.</p>
+<p> I met my exercise goal before dinner.</p>
+<p> Today I wake up early and did a 5k run with friends.</p>
+<p id="ppos"> I am still <mark style="background-color:#6DFE00;">the best</mark> among them.</p>
+<p id="ppos"> They <mark style="background-color:#6DFE00;">really appreciated</mark> this fact that I am the fittest.</p>
+<p id="ppos"> It made me <mark style="background-color:#6DFE00;">delighted</mark> and <mark style="background-color:#6DFE00;">motivated</mark> me.</p>
+<p id="ppos"> I made it to the gym yesterday afternoon on my lunch break and <mark style="background-color:#6DFE00;">had a great</mark> workout.</p>
+<p> I was introduced to a few new people yesterday at the gym.</p>
+<p> Working out at the gym.</p>
+<p id="ppos"> My numbers have gone up which makes me <mark style="background-color:#6DFE00;">extremely happy</mark>.</p>
+<p> I went to the gym.</p>
+<p> It was always hard to get started.</p>
+<p id="ppos"> I had an <mark style="background-color:#6DFE00;">amazing</mark> workout yesterday and did a ton of cardio, <mark style="background-color:#FF8B8B;">breaking</mark> a crazy sweat.</p>
+<p> I got up early today and walk-ran a 1.</p>
+<p> 5 mile race.</p>
+<p id="ppos"> I was <mark style="background-color:#FF8B8B;">very tired</mark> but it was <mark style="background-color:#6DFE00;">good</mark> to get the day started right.</p>
+<p id="ppos"> This morning I went to the Crossfit gym and competed in a team workout which was <mark style="background-color:#6DFE00;">a lot of fun</mark>.</p>
+<p> I went for a bike ride.</p>
+<p> I got in a great workout at the gym this morning.</p>
+<p> Running outside down the street for two miles.</p>
+<p> I went on an 8 mile run.</p>
+<p> I started exercising!</p>
+<p> I have been meaning to do that for a while.</p>
+<p> I went for a run.</p>
+<p id="ppos"> I did 2 beginner piyo workouts( yesterday and today) and feel <mark style="background-color:#6DFE00;">FANTASTIC</mark>!</p>
+<p> I just started working out again Tuesday and did my 3rd today.</p>
+<p> I went for a hike in a valley in Hawaii.</p>
+<p id="ppos"> Going to the gym always makes me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p id="ppos"> Of course working out and pushing myself <mark style="background-color:#FF8B8B;">is not always fun</mark> an games, but I am <mark style="background-color:#6DFE00;">genuinely</mark> <mark style="background-color:#6DFE00;">happy</mark> when I leave knowing I did my body <mark style="background-color:#6DFE00;">good</mark> and <mark style="background-color:#6DFE00;">had a great</mark> workout.</p>
+<p id="ppos"> Yesterday i attended one day yoga class training program and i learned a lot about yoga and i was <mark style="background-color:#6DFE00;">very happy</mark> that moment to execute my basic yoga.</p>
+<p> Going for a run at the gym.</p>
+<p> I went to the gym this morning to work off those drinks I drank.</p>
+<p> I went on a run in my neighborhood.</p>
+<p id="ppos"> <mark style="background-color:#6DFE00;">Had a great</mark> workout at the gym this afternoon.</p>
+<p id="ppos"> I spent 20 minutes on the elliptical while listening to <mark style="background-color:#6DFE00;">high-energy</mark> music, <mark style="background-color:#6DFE00;">generating</mark> a lot of sweat and endorphins; I was particularly <mark style="background-color:#6DFE00;">pleased</mark> because initially I felt <mark style="background-color:#FF8B8B;">a bit sore</mark> and <mark style="background-color:#FF8B8B;">tired</mark>, and did not know if I would make my 20- minute goal.</p>
+<p id="pneg"> When I was at the gym, I <mark style="background-color:#FF8B8B;">broke</mark> my record for a mile run.</p>
+<p> I went for a long bike ride.</p>
+<p id="ppos"> I completed a 40 mile road bike ride <mark style="background-color:#6DFE00;">safely</mark>.</p>
+<p> My wife joined me in the shower this morning after our 5 mile run.</p>
+<p> Entered a 5k run.</p>
+<p> I went to the gym and benched more than I thought I could.</p>
+<p id="ppos"> My knees <mark style="background-color:#6DFE00;">felt okay</mark>, and I went outside and went for a long run in <mark style="background-color:#6DFE00;">some great</mark> weather.</p>
+<p> I felt stronger when I was working out.</p>
+<p> I exercised for a long time.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">kept up with</mark> my daily workout routine and ran six miles.</p>
+<p id="ppos"> I went on a run and that always makes me <mark style="background-color:#6DFE00;">feel good</mark>.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">productive</mark> and went to the gym.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout in the park.</p>
+<p> I accomplished a new goal at my gym.</p>
+<p> I got a full workout this morning.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">really good</mark> workout and long <mark style="background-color:#6DFE00;">relaxing</mark> shower afterwards.</p>
+<p> I ran for two miles this morning.</p>
+<p> I went to the park and ran a mile.</p>
+<p id="ppos"> Today at the gym, I <mark style="background-color:#6DFE00;">was able to</mark> do a little more than I <mark style="background-color:#6DFE00;">was able to</mark> last week.</p>
+<p id="ppos"> I felt like I made some <mark style="background-color:#6DFE00;">improvements</mark>.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">felt good</mark> that I <mark style="background-color:#6DFE00;">made some progress</mark>.</p>
+<p> Running down the street for two and and a half miles as fast as I could.</p>
+<p> I went to the gym to work out.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">managed to</mark> make it to the gym after doing a lot of stuff today.</p>
+<p> I went mountain biking for the first time this year.</p>
+<p id="ppos"> It was a short ride, but it <mark style="background-color:#6DFE00;">felt good</mark> to be back on the bike again!</p>
+<p id="ppos"> I worked out and lifted weights this morning and it <mark style="background-color:#6DFE00;">felt good</mark>.</p>
+<p id="ppos"> I did three sets of chin-ups today, and <mark style="background-color:#6DFE00;">felt pretty good</mark>.</p>
+<p> I started running on the treadmill again.</p>
+<p id="ppos"> I did a 13- mile run on a <mark style="background-color:#6DFE00;">beautiful</mark> but very challenging trail route.</p>
+<p> I joined a new gym.</p>
+<p> I worked out for an hour.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> go for a 10 mile fun after training for a few months and it <mark style="background-color:#6DFE00;">felt great</mark>.</p>
+<p> I completed a 10 mile long run for the first time.</p>
+<p> i went to yoga.</p>
+<p> I went for a run outside.</p>
+<p> I completed a 40 mile ride on my bicycle.</p>
+<p id="ppos"> I went snowboarding and I <mark style="background-color:#6DFE00;">was able to</mark> do run after run in the <mark style="background-color:#6DFE00;">fresh</mark> powder.</p>
+<p id="pneg"> My yoga teacher massaging my face after a particularly <mark style="background-color:#FF8B8B;">difficult</mark> yoga class.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> when I started the gym.</p>
+<p> Going to yoga class.</p>
+<p> I started going to the gym.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">really good</mark> workout at the gym today.</p>
+<p id="pneg"> I completed a 50 mile bike ride that was physically and mentally <mark style="background-color:#FF8B8B;">taxing</mark>.</p>
+<p id="ppos"> I went for a <mark style="background-color:#6DFE00;">nice</mark> run on the boardwalk.</p>
+<p> I started exercising again.</p>
+<p> I went to the gym for the first time in a long time.</p>
+<p> Going back to yoga.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">love</mark> hot yoga even though it can be <mark style="background-color:#FF8B8B;">brutal</mark> while doing it, it just <mark style="background-color:#6DFE00;">feels so good</mark> after and I know it is <mark style="background-color:#6DFE00;">so beneficial</mark> for my body, mind and soul.</p>
+<p id="ppos"> I also am going back to the gym so maybe this is <mark style="background-color:#6DFE00;">more about taking care of</mark> myself and showing myself the <mark style="background-color:#6DFE00;">love</mark> I deserve.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">love</mark> play Soccer with my Friends in the Stadium.</p>
+<p id="ppos"> I exercise at morning it made me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> that <mark style="background-color:#6DFE00;">was able to</mark> complete my gym challenge.</p>
+<p> Getting back into the gym and working out regularly.</p>
+<p id="ppos"> The first day I got a 3 mile run in with enough <mark style="background-color:#6DFE00;">reduction in pain</mark> that I knew was <mark style="background-color:#6DFE00;">getting better</mark> after an <mark style="background-color:#FF8B8B;">injury</mark> and would be able to run this summer.</p>
+<p> Completed a one hour yoga session this morning without skipping any of the parts.</p>
+<p id="ppos"> I ran a <mark style="background-color:#6DFE00;">good time</mark> in my track race.</p>
+<p> I ran a new personal best in the 800 meters.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> complete a 2 1-2 mile jog at the gym.</p>
+<p> I am taking a running class at college currently.</p>
+<p id="ppos"> I was <mark style="background-color:#FF8B8B;">suffering from</mark> the stomach flu at the time and still <mark style="background-color:#6DFE00;">recovering</mark>, about 2 weeks ago.</p>
+<p id="pneg"> Even though I was feeling still <mark style="background-color:#FF8B8B;">sick</mark>, I <mark style="background-color:#FF8B8B;">forced</mark> myself out of my bed and went to my class.</p>
+<p> I ran 1.</p>
+<p> 5 miles straight without stopping, and felt very great afterwards.</p>
+<p id="ppos"> For the rest of the day, I was more active and <mark style="background-color:#6DFE00;">was able to</mark> walk-run throughout the day going around campus and ended up doing 10 miles, my personal best so far.</p>
+<p> I went to the gym today and lifted some weights.</p>
+<p id="ppos"> I felt so much better and <mark style="background-color:#6DFE00;">happier</mark> afterwards.</p>
+<p> I took a bike ride.</p>
+<p> I went for a run earlier.</p>
+<p id="ppos"> Doing a class of Yoga last week made me <mark style="background-color:#6DFE00;">feel happy and good</mark>.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout today.</p>
+<p id="ppos"> Going to my first yoga class in months made me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p> I went for a jog outside.</p>
+<p> I ran 10 miles.</p>
+<p> Joining the gym!</p>
+<p> I finally took the time after my military discharge to join back into a gym and get into better shape allowing me to play sports and it is something I look forward to everyday!</p>
+<p id="ppos"> I had a really great workout the other day that left me feeling <mark style="background-color:#6DFE00;">energized</mark> and <mark style="background-color:#6DFE00;">free from</mark> <mark style="background-color:#FF8B8B;">stress</mark>.</p>
+<p id="ppos"> The day I went to Yoga and <mark style="background-color:#6DFE00;">Meditation</mark> for the <mark style="background-color:#6DFE00;">relief</mark> of <mark style="background-color:#FF8B8B;">stress</mark> and mind <mark style="background-color:#FF8B8B;">tension</mark>.</p>
+<p id="ppos"> I went to the gym last night and had a <mark style="background-color:#6DFE00;">very good</mark> workout.</p>
+<p> I finally completed 60 push-ups and 80 squat-ups.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> run a mile a little faster.</p>
+<p> I spent an hour at the gym working out to try to get back into shape.</p>
+<p id="ppos"> Two months ago I started a new exercise to <mark style="background-color:#6DFE00;">lose weight</mark> and it <mark style="background-color:#6DFE00;">felt really good</mark> to start.</p>
+<p> Running a mile in the morning.</p>
+<p> when i walked 7 miles.</p>
+<p> that is the longest i have gone for a wlak.</p>
+<p id="ppos"> The day I returned to the gym after surgery was an <mark style="background-color:#6DFE00;">AMAZING</mark> day!</p>
+<p id="ppos"> <mark style="background-color:#6DFE00;">Fitness</mark> is a huge part of my life, so being away for months was a <mark style="background-color:#FF8B8B;">horrible</mark> experience!</p>
+<p id="ppos"> I became <mark style="background-color:#6DFE00;">happy</mark> when I lifted a new personal best at the gym for deadlifts.</p>
+<p> that weight in the gym is increasing.</p>
+<p id="ppos"> My <mark style="background-color:#6DFE00;">strength</mark> is increasing due to the fact that I am doing more push ups at night.</p>
+<p> I feel like I am getting stronger.</p>
+<p id="ppos"> I went to a long yoga class taught by a <mark style="background-color:#6DFE00;">favorite</mark> teacher.</p>
+<p id="ppos"> I felt <mark style="background-color:#6DFE00;">very happy</mark> the day I <mark style="background-color:#6DFE00;">was able to</mark> walk 1 mile on my treadmill.</p>
+<p id="ppos"> Finishing a long yoga session made me <mark style="background-color:#6DFE00;">really happy</mark> last week.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> workout and <mark style="background-color:#6DFE00;">lose 20 pounds</mark>.</p>
+<p> I ran 12 miles.</p>
+<p id="ppos"> I got a membership at a new gym, which I <mark style="background-color:#6DFE00;">really love</mark>.</p>
+<p> I have been running for exercise the last few months.</p>
+<p id="ppos"> Today I <mark style="background-color:#6DFE00;">was able to</mark> run an 8 minute mile for the first time.</p>
+<p> Going for a run near the beach.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> go to the gym and do my normal workout routine after a year off for surgery.</p>
+<p id="ppos"> Today, I had a <mark style="background-color:#6DFE00;">good</mark> gym session after work.</p>
+<p id="ppos"> i <mark style="background-color:#6DFE00;">was able to</mark> workout legs for the first time in a while today.</p>
+<p id="ppos"> Exercise has such a profound effect on our <mark style="background-color:#6DFE00;">happiness</mark> and <mark style="background-color:#6DFE00;">well-being</mark> that itas actually been proven to be an <mark style="background-color:#6DFE00;">effective</mark> strategy for <mark style="background-color:#6DFE00;">overcoming depression</mark>.</p>
+<p id="pneg"> In a study cited in Shawn Achoras book, The Happiness Advantage 1, three groups of patients treated their <mark style="background-color:#FF8B8B;">depression</mark> with either medication, exercise, or a combination of the two.</p>
+<p> The results of this study really surprised me.</p>
+<p> I ran the fastest 5k that I have ever run.</p>
+<p id="ppos"> I have been exercising more and that has made me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p> I set a new PR at the gym.</p>
+<p id="ppos"> Keeping physically fit by running and lifting weights keeps me <mark style="background-color:#6DFE00;">very happy</mark> and active.</p>
+<p id="ppos"> I started consistently exercising which has made me <mark style="background-color:#6DFE00;">feel better</mark> physically and mentally.</p>
+<p id="ppos"> I ran a 5 mile race in a <mark style="background-color:#6DFE00;">good time</mark> and finished in the top 5.</p>
+<p id="ppos"> My run( which was <mark style="background-color:#FF8B8B;">overdue</mark>) <mark style="background-color:#6DFE00;">felt so good</mark> yesterday that I ran an extra mile.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">beautiful</mark> morning filled with a great workout and prayer session.</p>
+<p> While out for a run, I ran into a girl that showed interest in me.</p>
+<p> Running 3 miles in less than thirty minutes.</p>
+<p id="ppos"> I have been <mark style="background-color:#FF8B8B;">rather out of shape</mark> for the last 15 years and since last summer I have been exercising more and getting back <mark style="background-color:#6DFE00;">in shape</mark>.</p>
+<p> I have not ran a sub 30 5k since probably around 2000.</p>
+<p id="ppos"> Therefore, when I got 3 miles in under 30 minutes that <mark style="background-color:#6DFE00;">was a great</mark> day.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> run a 7:30 mile for three miles after not running as frequently as I felt I should have been.</p>
+<p id="pneg"> I completed a <mark style="background-color:#FF8B8B;">really difficult</mark> workout that I was not sure I could even do.</p>
+<p> We went for a short walk today in the neighborhood.</p>
+<p> Went to the gym and worked out.</p>
+<p> I went to the gym and sat in the sauna for 30 minutes.</p>
+<p> I have been running regularly for over a year now, and on my run early last week I realized my average mile pace is now between an 8 and 8.</p>
+<p> 30 minute mile.</p>
+<p> going to the gym.</p>
+<p> I exercised at morning.</p>
+<p> I ate healthily after a tough leg workout.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> workout for the first time in a while and the endorphins made me <mark style="background-color:#6DFE00;">feel very good</mark>.</p>
+<p id="ppos"> I ran 10 miles on a <mark style="background-color:#6DFE00;">cool</mark> day and this was the longest I have run since my last <mark style="background-color:#FF8B8B;">injury</mark> and I <mark style="background-color:#6DFE00;">felt amazing</mark> <mark style="background-color:#FF8B8B;">on the run</mark>.</p>
+<p> I started going to the gym 3 weeks ago and I am already seeing the results.</p>
+<p> I set me best ever record on running 5 miles.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> run outside on a <mark style="background-color:#6DFE00;">sunny</mark> day.</p>
+<p id="ppos"> I just went for a long run, that was <mark style="background-color:#6DFE00;">fulfilling</mark>.</p>
+<p> Starting to work out at a gym.</p>
+<p> I worked out 3 days a week.</p>
+<p> I exercised everyday for the past week.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> when I went to the gym for the first time in a few months, a couple days ago.</p>
+<p> Just finished exercising at the gym for 1 1-2 hours.</p>
+<p id="ppos"> It <mark style="background-color:#6DFE00;">helps</mark> control my weight and <mark style="background-color:#6DFE00;">reduce my stress</mark>.</p>
+<p id="ppos"> I started running again and it <mark style="background-color:#6DFE00;">improved</mark> my mood and level of energy after the first run.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> after I went for a run at the gym on the treadmill.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> workout after my knee started <mark style="background-color:#6DFE00;">feeling better</mark>.</p>
+<p id="ppos"> I defined a better <mark style="background-color:#6DFE00;">fitness</mark> goal.</p>
+<p id="pneg"> I climbed a <mark style="background-color:#FF8B8B;">really difficult</mark> route that I had been working on at the climbing gym.</p>
+<p> I ran 7 miles on Sunday.</p>
+<p> Last month when I finally started back up on my workout routine.</p>
+<p id="ppos"> Hitting the gym in the morning made me <mark style="background-color:#6DFE00;">feel much better</mark>.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> go on a 22 mile bike ride.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> backpack 20 miles in a day after working hard to get <mark style="background-color:#6DFE00;">in shape</mark>.</p>
+<p id="ppos"> I recently did a tempo run and ran 16 miles at 6:45 pace and it was not all that <mark style="background-color:#FF8B8B;">difficult</mark> but it gave me the <mark style="background-color:#6DFE00;">confidence</mark> for the marathon that I can <mark style="background-color:#6DFE00;">qualify</mark> for Boston.</p>
+<p id="ppos"> I am <mark style="background-color:#6DFE00;">really happy</mark> that my training has gotten me to this point.</p>
+<p> Started to exercise n saw changes in body.</p>
+<p> I finally completed 60 push-ups and 80 squat-ups.</p>
+<p id="ppos"> I joined a new gym to work out and <mark style="background-color:#6DFE00;">lose weight</mark>.</p>
+<p id="ppos"> I did cardiovascular exercise which made me feel <mark style="background-color:#6DFE00;">happy</mark> and <mark style="background-color:#6DFE00;">energized</mark>.</p>
+<p id="ppos"> I exercised early in the morning a and practice's <mark style="background-color:#6DFE00;">meditation</mark> it made me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p id="ppos"> I went to Yoga, <mark style="background-color:#6DFE00;">meditation</mark> class and <mark style="background-color:#6DFE00;">relax</mark> my mind.</p>
+<p id="ppos"> I felt <mark style="background-color:#6DFE00;">happy</mark> when I joined a new gym in my city.</p>
+<p> They have state of the art equipment and an outdoor swimming pool.</p>
+<p id="ppos"> Yesterday I went for a run and I was expecting it to <mark style="background-color:#FF8B8B;">go badly</mark> but it was actually quite strong and <mark style="background-color:#6DFE00;">felt great</mark>.</p>
+<p id="ppos"> The day I started to <mark style="background-color:#6DFE00;">love</mark> working out was a <mark style="background-color:#6DFE00;">happy</mark> moment for me.</p>
+<p> I usually loathe doing exercise but I finally found the right fit for me and now I look forward to it.</p>
+<p id="ppos"> I look forward to my work outs and the <mark style="background-color:#6DFE00;">improvements</mark> in my body.</p>
+<p> I ran 6 miles along the waterfront.</p>
+<p id="ppos"> Just this morning after finishing my workout I felt <mark style="background-color:#6DFE00;">happy</mark> because I had <mark style="background-color:#6DFE00;">managed to</mark> wake up early in the morning to exercise twice this week.</p>
+<p id="ppos"> Yesterday I <mark style="background-color:#6DFE00;">was able to</mark> walk 3 miles with little <mark style="background-color:#FF8B8B;">tiring</mark>.</p>
+<p> Last week I ran the furthest and fastest I have ever run.</p>
+<p> Went to exercise for the first time in a while at the gym.</p>
+<p id="pneg"> I exercised using a treadmill which I have been <mark style="background-color:#FF8B8B;">neglecting</mark> in recent months.</p>
+<p id="ppos"> I went on a great hike and got a <mark style="background-color:#6DFE00;">good</mark> sweat in.</p>
+<p id="ppos"> I got up real early and went and <mark style="background-color:#6DFE00;">had a great</mark> workout.</p>
+<p> i started the gym one more time.</p>
+<p> I did some bike riding.</p>
+<p id="pneg"> Getting to work on rehabbing a workout <mark style="background-color:#FF8B8B;">injury</mark>.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout that got me in a great mood today.</p>
+<p> I ran 5 miles.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout, <mark style="background-color:#6DFE00;">better than</mark> most, and it felt <mark style="background-color:#6DFE00;">productive</mark>.</p>
+<p id="pneg"> I went for a run yesterday and all the <mark style="background-color:#FF8B8B;">pain</mark> I was feeling in my legs went away.</p>
+<p> I went on a 10 mile bike ride, longest ride ever for me!</p>
+<p id="ppos"> An <mark style="background-color:#6DFE00;">attractive</mark> girl <mark style="background-color:#6DFE00;">smiled</mark> at me in the gym.</p>
+<p> I raised the weight in all my lifts at the gym.</p>
+<p id="ppos"> I took a 5 mile walk after eating and the adrenaline rush <mark style="background-color:#6DFE00;">was amazing</mark>.</p>
+<p> I reached a designated weight I was trying to get to in the gym.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout!</p>
+<p> going to yoga training session.</p>
+<p id="ppos"> Running 7 minute mile which I have tried for 3 months have made me accomplished and <mark style="background-color:#6DFE00;">thrilled</mark> that my body could push the capacity to achieve more than my mind could have.</p>
+<p id="ppos"> <mark style="background-color:#6DFE00;">Had a great</mark> day sparring with friends at the gym yesterday; <mark style="background-color:#6DFE00;">excited</mark> for the rest of the week!</p>
+<p> I finally completed 70 push-ups and 100 squat-ups.</p>
+<p> I went to turtles gym and did some cardio workout for more than an hour.</p>
+<p> Last week I went to work out and I stayed a extra 20 minutes and ran on the treadmill some more!</p>
+<p> Yesterday I ran 6 miles during my lunch.</p>
+<p> I did not think I was going to run that much.</p>
+<p id="pneg"> I intended to run 3 miles but I had so much energy, I just keep going until I <mark style="background-color:#FF8B8B;">got tired</mark>.</p>
+<p id="ppos"> I discovered several places in my city where I can get a <mark style="background-color:#6DFE00;">really good</mark> and fun workout.</p>
+<p id="ppos"> An <mark style="background-color:#6DFE00;">attractive</mark> young woman at the gym's swimming pool approached me and talked with me.</p>
+<p id="ppos"> I went for an 11 mile run on Sunday and <mark style="background-color:#6DFE00;">enjoyed</mark> the scenery all around me.</p>
+<p> I lifted more weight than I ever have before at the gym.</p>
+<p> Going to the gym for the first time in months.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">really good</mark> feeling workout at the gym.</p>
+<p id="ppos"> I went on a long walk of over an hour and felt <mark style="background-color:#6DFE00;">energized</mark>.</p>
+<p id="pneg"> I started running again after a <mark style="background-color:#FF8B8B;">really bad</mark> personal <mark style="background-color:#FF8B8B;">injury</mark>.</p>
+<p id="ppos"> Finding a 20 dollar bill in the parking lot of the gym made me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p> Riding a bike.</p>
+<p id="ppos"> I got to workout <mark style="background-color:#6DFE00;">without having to worry about</mark> working at the same time.</p>
+<p id="ppos"> I went for a 5 miles walk on a <mark style="background-color:#6DFE00;">sunny</mark> day.</p>
+<p id="ppos"> I went to the gym and <mark style="background-color:#6DFE00;">had a great</mark> workout, then went tanning afterwards.</p>
+<p> I ran on the treadmill for a week straight.</p>
+<p> I completed a 2 mile run in less than 15 minutes.</p>
+<p id="ppos"> I woke up early in the morning and exercised it made me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p id="ppos"> Last month i went to one day yoga event and i was <mark style="background-color:#6DFE00;">very happy</mark> to know how to do some basic yoga exercise which is <mark style="background-color:#6DFE00;">very helpful</mark> for breathing.</p>
+<p> Playing pickup volleyball.</p>
+<p id="ppos"> Went on a <mark style="background-color:#6DFE00;">nice</mark> long run in the rain today.</p>
+<p id="ppos"> Felt <mark style="background-color:#6DFE00;">really energized</mark>.</p>
+<p> starting walking for exercising.</p>
+<p> I went to the gym consistently for the first time in awhile this past weekend.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">always enjoy</mark> going to the gym.</p>
+<p id="ppos"> I ate something <mark style="background-color:#6DFE00;">healthy</mark> and worked out.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> take the baby on a 2 mile walk.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> go to the gym and start working out again.</p>
+<p> I started going to a local gym and recognized changes in my physique.</p>
+<p> I started High Intensity Interval Training and I completed a 30 minute workout.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">felt amazing</mark> afterwards.</p>
+<p> Riding a sports bike.</p>
+<p> Running 2 miles which is the most I have ever ran consecutively.</p>
+<p id="ppos"> Something that made me <mark style="background-color:#6DFE00;">happy</mark> was attending a yoga class.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">really good</mark> workout yesterday.</p>
+<p id="ppos"> I got in a <mark style="background-color:#6DFE00;">great day</mark> of climbing at the rock gym and finished a new route.</p>
+<p id="ppos"> I started eating <mark style="background-color:#6DFE00;">healthy</mark> again and working out more to get <mark style="background-color:#6DFE00;">in shape</mark>!</p>
+<p> I started doing yoga on a regular basis.</p>
+<p> I ran a mile under nine minutes for the first time in 10 years.</p>
+<p> When I walked over 10 miles.</p>
+<p> I began a workout routine.</p>
+<p> I ran the fastest 2 miles that I have in a long time and am getting in better shape.</p>
+<p id="ppos"> I am <mark style="background-color:#6DFE00;">motivated</mark> to get back <mark style="background-color:#6DFE00;">in shape</mark>, so I went running for the first time in over a year.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">thrilled</mark> that I <mark style="background-color:#6DFE00;">was able to</mark> run a mile without stopping.</p>
+<p id="ppos"> I went for a mile run and afterward I felt <mark style="background-color:#6DFE00;">fantastic</mark>.</p>
+<p id="ppos"> Exercise has such a profound effect on our <mark style="background-color:#6DFE00;">happiness</mark> and <mark style="background-color:#6DFE00;">well-being</mark> that itas actually been proven to be an <mark style="background-color:#6DFE00;">effective</mark> strategy for <mark style="background-color:#6DFE00;">overcoming depression</mark>.</p>
+<p id="pneg"> In a study cited in Shawn Achoras book, The Happiness Advantage 1, three groups of patients treated their <mark style="background-color:#FF8B8B;">depression</mark> with either medication, exercise, or a combination of the two.</p>
+<p> The results of this study really surprised me.</p>
+<p id="ppos"> Had a <mark style="background-color:#6DFE00;">good</mark> workout at the gym.</p>
+<p> I ran a mile on the treadmill at the gym without stopping.</p>
+<p id="ppos"> I returned to the gym <mark style="background-color:#6DFE00;">without pain</mark> after <mark style="background-color:#FF8B8B;">injuring</mark> my back.</p>
+<p> I ran 6 miles.</p>
+<p id="ppos"> <mark style="background-color:#6DFE00;">having a great</mark> workout.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">nice</mark> run outside.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> the day I <mark style="background-color:#6DFE00;">was able to</mark> lift more than my workout partner at the gym.</p>
+<p id="pneg"> I found my gym bag, which I had <mark style="background-color:#FF8B8B;">lost</mark>.</p>
+<p> I went to the gym 7 days in a row.</p>
+<p id="ppos"> It <mark style="background-color:#6DFE00;">was amazing</mark>, I never been this active.</p>
+<p id="ppos"> I am slowly <mark style="background-color:#6DFE00;">losing weight</mark>.</p>
+<p> I am starting to see muscles pop out showing all my hard work at the gym.</p>
+<p> I got to go to the gym today after not being able to go for the last five days or so.</p>
+<p> being able to workout longer at the gym.</p>
+<p id="ppos"> At the gym I set new personal records on bench press and <mark style="background-color:#FF8B8B;">dead</mark> lift that I have <mark style="background-color:#6DFE00;">been stuck</mark> on for the past couple weeks.</p>
+<p> New PR in the gym.</p>
+<p> I finally reached the 225 club on the bench press.</p>
+<p> I noticed myself getting stronger from my recent exercise routines.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> complete a full and hard workout after my thumb <mark style="background-color:#6DFE00;">healed</mark> and prevented me from working out.</p>
+<p> Me and my husband went to the gym to burn off some calories.</p>
+<p> Ran an 8 minute mile yesterday.</p>
+<p> Back on Sunday, I finished the Broad Street Run, which is a 10- mile race in Philadelphia.</p>
+<p> When I started going to the gym again a month ago.</p>
+<p id="ppos"> I forgot <mark style="background-color:#6DFE00;">how good</mark> you feel after a workout, and now i maintain a regular workout schedule.</p>
+<p id="ppos"> The weather forecast is <mark style="background-color:#6DFE00;">solid</mark> for my ten mile run this afternoon, so I am <mark style="background-color:#6DFE00;">happy</mark> and looking forward to exercising.</p>
+<p> At the gym I squatted 405 for the first time, something that I have been working very hard to achieve.</p>
+<p id="ppos"> I learned a new habit and I am doing regular exercise for the past 2 months and doing yoga and that changes makes me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p> I started a new morning routine where I walk around the neighborhood park for at least two miles.</p>
+<p> I have started doing yoga and getting my body into shape.</p>
+<p> went to the gym.</p>
+<p> Finishing my crossfit workout yesterday.</p>
+<p id="ppos"> We went for a <mark style="background-color:#6DFE00;">nice</mark> six mile bike ride yesterday night.</p>
+<p> I walked 6 miles.</p>
+<p> I ran for 24 minutes yesterday at the gym, my longest run since I began running a few weeks ago.</p>
+<p> I hit my exercise goal for the week from a 5 mile run.</p>
+<p id="ppos"> I went to the gym this morning and <mark style="background-color:#6DFE00;">did the best</mark> I have ever done exercising for 1 hour non-stop.</p>
+<p> Being able to workout yesterday and today.</p>
+<p> I walked almost a mile yesterday.</p>
+<p> I had wanted to increase my exercise for a while and yesterday was the furthest I had gone.</p>
+<p> I went to the gym and worked out my shoulders and arms.</p>
+<p id="ppos"> It had been a <mark style="background-color:#6DFE00;">good</mark> week since I focused on shoulders and it <mark style="background-color:#6DFE00;">felt great</mark>.</p>
+<p> went for the long bike ride to himalaya.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout yesterday morning before work and I feel ready for my 12-14 mile run next weekend.</p>
+<p id="ppos"> I went to the gym and <mark style="background-color:#6DFE00;">managed to</mark> run 36 minutes straight!</p>
+<p id="ppos"> I am on the way to <mark style="background-color:#6DFE00;">losing weight</mark>!</p>
+<p> Running a mile in under 8 minutes for the first time.</p>
+<p> I ran a personal best in a 5K race.</p>
+<p> Have exercised 3 days in a row; feeling fit!</p>
+<p> I found a nickel on the floor at the gym.</p>
+<p id="ppos"> I finally had some time to exercise yesterday, and it <mark style="background-color:#6DFE00;">felt really good</mark>.</p>
+<p id="ppos"> I am <mark style="background-color:#6DFE00;">getting better</mark> exercising every day and it is making me feel accomplished.</p>
+<p id="ppos"> I completed a workout and <mark style="background-color:#6DFE00;">managed to</mark> push myself further than I had previously.</p>
+<p> I went for a jog when the sun was out.</p>
+<p> I completed an exercise goal and took a shower after to cool down.</p>
+<p id="ppos"> I exercised <mark style="background-color:#6DFE00;">efficiently</mark> this morning.</p>
+<p id="ppos"> I <mark style="background-color:#FF8B8B;">broke</mark> my bench press plateau at the gym and started <mark style="background-color:#6DFE00;">progressing</mark> again.</p>
+<p> I have been working on my running and was recently able to out run my running partners for the first time.</p>
+<p id="ppos"> I went to the gym today and got a lot of miles in, and it <mark style="background-color:#6DFE00;">feels so good</mark> to walk and run it out.</p>
+<p id="ppos"> I went for a long run and <mark style="background-color:#6DFE00;">felt good</mark> afterwards.</p>
+<p id="ppos"> I went for a run in the early morning, and when I was running around a park, I came across a <mark style="background-color:#6DFE00;">cute</mark> toad in the grass.</p>
+<p id="ppos"> I finished a <mark style="background-color:#6DFE00;">good</mark> workout.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">felt good enough</mark> to go to gym yesterday.</p>
+<p id="ppos"> I have started running more often and am <mark style="background-color:#6DFE00;">feeling better</mark> about my run time and being <mark style="background-color:#6DFE00;">less tired</mark>.</p>
+<p> I started bike riding again.</p>
+<p id="ppos"> I got to <mark style="background-color:#6DFE00;">enjoy</mark> some exercise.</p>
+<p> I memorized a yoga mantra from my yoga guru.</p>
+<p> I finished a whole week going to the gym without missing a day.</p>
+<p id="ppos"> I performed <mark style="background-color:#6DFE00;">very well</mark> in the gym, re-achieving some old standards but be set for myself in the past.</p>
+<p> I lifted a personal best for myself at the gym.</p>
+<p> Got a great yoga workout in.</p>
+<p> I got to jump around at parkour visions gym.</p>
+<p> I went for a really long run.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> that I had energy to workout.</p>
+<p> I went for a mountain bike ride.</p>
+<p> This was the first for the this year, since winter.</p>
+<p id="ppos"> It was a little <mark style="background-color:#FF8B8B;">messy</mark> with mud, but <mark style="background-color:#6DFE00;">lots of fun</mark>.</p>
+<p id="ppos"> I hit an <mark style="background-color:#6DFE00;">awesome</mark> <mark style="background-color:#6DFE00;">ace</mark> while playing tennis this morning.</p>
+<p> Running on the beach and watching the ocean.</p>
+<p> Such an uplifting experience.</p>
+<p> I walked outside for 6 miles.</p>
+<p id="ppos"> I went for a run and exercised during a <mark style="background-color:#6DFE00;">nice</mark>, <mark style="background-color:#6DFE00;">cool</mark>, <mark style="background-color:#6DFE00;">sunny</mark> evening.</p>
+<p> When I went on an early morning run yesterday.</p>
+<p id="ppos"> It really made me <mark style="background-color:#6DFE00;">feel great</mark>, and prepared me for the day.</p>
+<p> Went for a run in the rain.</p>
+<p id="ppos"> I have <mark style="background-color:#6DFE00;">managed to</mark> consistently do cardio workouts every other day.</p>
+<p> I finally completed 50 push-ups and 70 squat-ups.</p>
+<p> My bench press weight went up since last week in the gym.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> personal training session this morning and feel accomplished very early in the day!</p>
+<p id="ppos"> when i could ride my bike <mark style="background-color:#6DFE00;">without any fear</mark> of <mark style="background-color:#FF8B8B;">crashing</mark> at a high speed.</p>
+<p id="ppos"> i <mark style="background-color:#6DFE00;">was able to</mark> exercise and <mark style="background-color:#6DFE00;">lose a little weight</mark>.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">lost four pounds</mark> following a new exercise program at the gym.</p>
+<p> Last night, I worked out with a weight set and a new workout I had not tried before.</p>
+<p id="ppos"> Took a <mark style="background-color:#6DFE00;">cool</mark> shower after a workout that felt <mark style="background-color:#6DFE00;">refreshing</mark>.</p>
+<p> I went on my first official vacation in 9 years on an international trip with a gym group.</p>
+<p> Doing workout at morning with coach fir the first time.</p>
+<p id="ppos"> I went to a workout class and <mark style="background-color:#6DFE00;">got to know</mark> some new people.</p>
+<p> I woke up early morning and started doing exercise to reduce the weight.</p>
+<p> I was planning to do this for long but could start today only.</p>
+<p id="ppos"> Feeling <mark style="background-color:#6DFE00;">excited</mark>.</p>
+<p> Got my gym membership renewed.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">love</mark> play Soccer in the Stadium with my Friends.</p>
+<p id="ppos"> I went for a <mark style="background-color:#6DFE00;">really good</mark> run and the weather was <mark style="background-color:#6DFE00;">perfect</mark> out.</p>
+<p> I walked for 6 miles this morning.</p>
+<p id="ppos"> I went to a really fun and challenging cycling class, it was an <mark style="background-color:#6DFE00;">amazing</mark> workout.</p>
+<p id="ppos"> I saw <mark style="background-color:#6DFE00;">improvement</mark> in my workout, as I <mark style="background-color:#6DFE00;">was able to</mark> do more.</p>
+<p> Running 3 miles at the gym.</p>
+<p> Ran a 6 minute mile at the track.</p>
+<p> i started went to gym regularly.</p>
+<p id="ppos"> I went to the gym last night, which <mark style="background-color:#6DFE00;">always feels good</mark>.</p>
+<p id="ppos"> Getting <mark style="background-color:#6DFE00;">compliments</mark> from my trainer at the gym.</p>
+<p> I finally completed 70 push-ups and 80 squat-ups.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> return to the gym after <mark style="background-color:#FF8B8B;">injuring</mark> my knee.</p>
+<p> I went to wait for someone at a gym and got to watch diving students.</p>
+<p id="ppos"> I started going to the gym and stronger and <mark style="background-color:#6DFE00;">more confident</mark>.</p>
+<p> I, started exercising at the gym.</p>
+<p id="ppos"> I became <mark style="background-color:#6DFE00;">happy</mark> that I got a <mark style="background-color:#6DFE00;">good</mark> workout in at gym today.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> work together with my local Tema Instinct players to turn our part of town yellow and hold every gym for over a month.</p>
+<p> I swam a mile in 40 minutes.</p>
+<p> I went to school to train yoga for young students.</p>
+<p id="ppos"> Going for a run on a <mark style="background-color:#6DFE00;">nice</mark> day.</p>
+<p> I ran around the track for a mile.</p>
+<p> Met another goal I have had as part of my exercise program at the gym.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">really productive</mark> at the gym.</p>
+<p id="ppos"> I felt really accomplished because I <mark style="background-color:#6DFE00;">was able to</mark> run a longer duration.</p>
+<p> I recently purchased an elliptical on Craigslist.</p>
+<p id="ppos"> Being able to exercise on it makes me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p id="pneg"> I am able to do cardio at any time of the day and even when the weather is <mark style="background-color:#FF8B8B;">not ideal</mark> for walking or running.</p>
+<p> Today my gym buddy and I both stayed on the elliptical for 25 minutes( we started at 10 minutes).</p>
+<p> When I went for a run yesterday morning and took a cold shower afterwards.</p>
+<p id="ppos"> It <mark style="background-color:#6DFE00;">felt great</mark> and prepared me for the day.</p>
+<p> i buy a bcaa supplement for my exercises in the gym.</p>
+<p id="ppos"> Getting in a <mark style="background-color:#6DFE00;">nice</mark> leg day at the gym.</p>
+<p> I went for a jog.</p>
+<p id="ppos"> Exercise has such a profound effect on our <mark style="background-color:#6DFE00;">happiness</mark> and <mark style="background-color:#6DFE00;">well-being</mark> that it is actually been proven to be an <mark style="background-color:#6DFE00;">effective</mark> strategy for <mark style="background-color:#6DFE00;">overcoming depression</mark>.</p>
+<p id="pneg"> In a study cited in Shawn Achor's book, The Happiness Advantage 1, three groups of patients treated their <mark style="background-color:#FF8B8B;">depression</mark> with either medication, exercise, or a combination of the two.</p>
+<p> The results of this study really surprised me.</p>
+<p id="ppos"> Beating my personal <mark style="background-color:#6DFE00;">best time</mark> in running a mile.</p>
+<p> I joined our neighborhood gym last month and have been exercising three times a week.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> to discover a new class at the gym that I <mark style="background-color:#6DFE00;">really enjoy</mark>.</p>
+<p> I have sticking to my exercise schedule and manage to exercise at least five days a week.</p>
+<p id="ppos"> This makes me <mark style="background-color:#6DFE00;">happy</mark> and I hope to change it to daily exercise in the future.</p>
+<p id="pneg"> It makes me feel light and keeps me <mark style="background-color:#FF8B8B;">alert</mark> all day.</p>
+<p id="ppos"> I have begun to run more and I <mark style="background-color:#6DFE00;">feel better</mark>.</p>
+<p id="ppos"> I went for a 30 mile bike ride on a <mark style="background-color:#6DFE00;">beautiful</mark> day that featured lots on <mark style="background-color:#6DFE00;">sunshine</mark> and great scenery.</p>
+<p> I went to a costume drawing workshop, since I have not been to one for months.</p>
+<p id="ppos"> The energy from drawing with many <mark style="background-color:#6DFE00;">talented</mark> artists, permeated into me.</p>
+<p id="ppos"> While I was <mark style="background-color:#FF8B8B;">a bit rusty</mark> at the beginning, I quickly put out <mark style="background-color:#6DFE00;">decent</mark> drawings that I was <mark style="background-color:#6DFE00;">proud</mark> of.</p>
+<p id="ppos"> Coming out of that workshop was like coming out of a gym after a <mark style="background-color:#6DFE00;">good</mark> day's workout.</p>
+<p id="ppos"> I started doing Orange Theory for a workout and am finally <mark style="background-color:#6DFE00;">taking care of</mark> myself.</p>
+<p id="ppos"> I feel so much better working out and have more energy and <mark style="background-color:#6DFE00;">feel better</mark> about myself.</p>
+<p> I went for a 4 mile run.</p>
+<p id="ppos"> i <mark style="background-color:#6DFE00;">was able to</mark> workout with someone this saturday that is going to be able to change my body <mark style="background-color:#6DFE00;">for the better</mark>.</p>
+<p> Increasing my workout intensity.</p>
+<p> Finally got my gym membership back.</p>
+<p> I finally went to the gym again for the first time in over a week.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> run.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> time during exercises and had a <mark style="background-color:#6DFE00;">really vigorous</mark> workout.</p>
+<p> i joined a new gym today.</p>
+<p> Making an omelet after my morning run.</p>
+<p> Decided to workout for the first time in a year.</p>
+<p> I took a run around the block for exercise.</p>
+<p> Last week I ran a 10k in under 45 minutes.</p>
+<p> That was the fastest I have ever ran a10k.</p>
+<p id="ppos"> All my training is <mark style="background-color:#6DFE00;">paying off</mark>.</p>
+<p id="ppos"> I have been trying for a long time to <mark style="background-color:#6DFE00;">lose weight</mark> and get in better shape.</p>
+<p> Last night I was in a yoga class and could see some real definition in my arms.</p>
+<p id="ppos"> I did <mark style="background-color:#6DFE00;">above and beyond</mark> my normal workout routine.</p>
+<p id="ppos"> I got 10,000 steps yesterday because I <mark style="background-color:#6DFE00;">was able to</mark> workout at rugby.</p>
+<p id="pneg"> I sent a few new bouldering <mark style="background-color:#FF8B8B;">problems</mark> at my gym today: a v3 +, v4-, and a V4.</p>
+<p> I feel like I am getting stronger as a climber.</p>
+<p> I did 50 push-ups for the first time in my daily exercise.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> run a mile <mark style="background-color:#6DFE00;">without being winded</mark>!</p>
+<p> I walked an extra half mile today on lunch, without being late getting back.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">really satisfying</mark> workout and my biceps looked bigger.</p>
+<p id="ppos"> I found a new personal trainer to <mark style="background-color:#6DFE00;">help</mark> me with <mark style="background-color:#6DFE00;">fitness</mark>.</p>
+<p> Finally going back to the gym after being gone for over two weeks.</p>
+<p> I went out for a long run and hike.</p>
+<p id="ppos"> I played tennis for two hours today, <mark style="background-color:#6DFE00;">good</mark> workout!</p>
+<p> I completed a 50 mile bike ride.</p>
+<p> Finally went to the local gym today with my wife to take a look around.</p>
+<p> The staff there gave us a 3 day guest pass to try it out.</p>
+<p> I took over a gym in pokemon go.</p>
+<p> I finally started my exercise regime for 30 minutes in the morning.</p>
+<p id="ppos"> It made me <mark style="background-color:#6DFE00;">really feel refreshed</mark> and <mark style="background-color:#6DFE00;">energized</mark> throughout the day.</p>
+<p> I finally started back doing intense cardio again.</p>
+<p> I ran on the treadmill last night and ran faster and farther than usual.</p>
+<p id="ppos"> I set a personal <mark style="background-color:#6DFE00;">best time</mark> at the gym on the rowing machine.</p>
+<p> Yesterday I completed a 5 kilometer race at the quickest pace I have ever run.</p>
+<p> This morning I slept in and decided not to go to the gym.</p>
+<p> I went to the gym today and noticed a hint of abs.</p>
+<p> I rode my exercise bike for 30 minutes in one session.</p>
+<p> I ran two miles for the first time in a year.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout at the gym, I trained my back.</p>
+<p> I did a hard workout today.</p>
+<p id="ppos"> Getting a <mark style="background-color:#6DFE00;">good</mark> workout in last week made me feel <mark style="background-color:#6DFE00;">happy</mark> and <mark style="background-color:#6DFE00;">excited</mark> about my <mark style="background-color:#6DFE00;">fitness</mark> <mark style="background-color:#6DFE00;">progress</mark>.</p>
+<p id="ppos"> <mark style="background-color:#6DFE00;">Had a great</mark> <mark style="background-color:#6DFE00;">productive</mark> workout that <mark style="background-color:#6DFE00;">energized</mark> me for the rest of the day.</p>
+<p> i started to do exercise last month.</p>
+<p> I went for a run.</p>
+<p> I walked for 6 miles.</p>
+<p id="ppos"> I heard some <mark style="background-color:#6DFE00;">good</mark> workout tips.</p>
+<p id="ppos"> <mark style="background-color:#6DFE00;">Renewed</mark> my gym membership so I can start working out again.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">improved</mark> my personality by going to the gym regularly.</p>
+<p id="ppos"> I finally had time to do my <mark style="background-color:#6DFE00;">free</mark> weight workout yesterday, and it made me <mark style="background-color:#6DFE00;">feel good</mark>.</p>
+<p> I meditated for 20 minutes this morning and then did some yoga stretches.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> to complete my first body pump class today at the gym.</p>
+<p> Getting my old truck to run after a long time of sitting in the driveway.</p>
+<p id="ppos"> Starting phase II of my workout routine which I am better suited to show my <mark style="background-color:#6DFE00;">strengths</mark> in.</p>
+<p id="ppos"> I went for a long run around a lake in a <mark style="background-color:#6DFE00;">nice</mark> city park early in the morning.</p>
+<p> I, started a gym membership, to work out.</p>
+<p id="ppos"> One event that made me <mark style="background-color:#6DFE00;">happy</mark> was getting back in the gym after <mark style="background-color:#FF8B8B;">not working</mark> out there for a month.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> run a longer distance today before <mark style="background-color:#FF8B8B;">getting tired</mark>.</p>
+<p id="ppos"> I feel like my hard work at the gym has been <mark style="background-color:#6DFE00;">paying off</mark>!</p>
+<p id="ppos"> Being able to run a half mile <mark style="background-color:#6DFE00;">cheered</mark> my day up.</p>
+<p> I went for a hard bike ride yesterday.</p>
+<p> I had a empty gym to workout in.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> run last night and I <mark style="background-color:#6DFE00;">felt good</mark> but <mark style="background-color:#FF8B8B;">tired</mark> when I came back.</p>
+<p> I exercised at morning.</p>
+<p id="ppos"> I exercised when I woke up and it felt <mark style="background-color:#6DFE00;">wonderful</mark> to feel <mark style="background-color:#6DFE00;">energized</mark> in the morning.</p>
+<p> I completed a 24 mile bike ride in 90 minutes.</p>
+<p id="ppos"> We had a community sports event at our locality and i have participated the soccer match and it <mark style="background-color:#6DFE00;">was fun</mark> and <mark style="background-color:#6DFE00;">sporty</mark>.</p>
+<p id="ppos"> I went for an epic bike ride this morning, 18 miles at the bike park felt <mark style="background-color:#6DFE00;">fantastic</mark>.</p>
+<p id="ppos"> I went to the park and had a <mark style="background-color:#6DFE00;">good</mark> workout by myself.</p>
+<p> I went for a run on a trail and hoped to make it 1.</p>
+<p> 5 to 2 miles before stopping.</p>
+<p> I ended up going 3.</p>
+<p> 7 miles without even realizing it.</p>
+<p> I finished at 4 miles but felt like I could have gone longer.</p>
+<p> I went to the gym and finally hit 225 bench, one of my long time goals since I started lifting weights.</p>
+<p> The gym staff left the mp3 cable for their speaker system so I listened to my own music while working out.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> when I ran four miles the other day( my best run in months).</p>
+<p> I went for a jog while the sun was out.</p>
+<p id="ppos"> My gym buddies and I had a real <mark style="background-color:#6DFE00;">good</mark> work-out session at the gym.</p>
+<p> I just finished my workout.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> to finish a 70 mile bike ride yesterday.</p>
+<p> I joined the Gym last month and started to workout.</p>
+<p id="ppos"> When I completed the first day of workouts, I felt <mark style="background-color:#6DFE00;">really happy</mark> and <mark style="background-color:#6DFE00;">proud</mark>.</p>
+<p id="ppos"> It gave me a <mark style="background-color:#6DFE00;">confidence</mark> and I was <mark style="background-color:#6DFE00;">happy</mark> all night.</p>
+<p> i got a new gym.</p>
+<p> I started going to the gym and gained 4 pounds after the first week.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">complimented</mark> by a girl at the gym.</p>
+<p id="ppos"> I got into nationals for a <mark style="background-color:#6DFE00;">fitness</mark> competition my gym was holding.</p>
+<p id="ppos"> One of the things that I <mark style="background-color:#6DFE00;">enjoy</mark> doing is running.</p>
+<p> I run 5 to 6 times a week, about 30 mile total.</p>
+<p id="ppos"> I have a training plan that follow that is very intense and <mark style="background-color:#6DFE00;">improves</mark> my running.</p>
+<p id="ppos"> Every month I sign up for a race to see my <mark style="background-color:#6DFE00;">improvements</mark>.</p>
+<p id="ppos"> <mark style="background-color:#6DFE00;">Improvement</mark> makes me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p id="ppos"> Racing makes me <mark style="background-color:#6DFE00;">happy</mark> after it is over.</p>
+<p id="ppos"> I ran a mile under 6:30 and feel like I <mark style="background-color:#6DFE00;">am in great</mark> shape.</p>
+<p> I have started going to the gym again.</p>
+<p id="ppos"> I took a yoga class from a <mark style="background-color:#6DFE00;">really good</mark> instructor for the first time.</p>
+<p id="ppos"> I have <mark style="background-color:#6DFE00;">always enjoyed</mark> doing yoga on my own and this instructor <mark style="background-color:#6DFE00;">was amazing</mark>.</p>
+<p> Getting a gym membership and seeing the results quickly.</p>
+<p> I decided to join a gym and use a personal trainer.</p>
+<p id="ppos"> Two weeks ago I went to the gym three times in one week and <mark style="background-color:#6DFE00;">lost another pound</mark>.</p>
+<p id="ppos"> I was <mark style="background-color:#FF8B8B;">pain</mark> <mark style="background-color:#6DFE00;">free</mark> after lifting at the gym.</p>
+<p id="ppos"> Had a <mark style="background-color:#6DFE00;">really good</mark> workout today.</p>
+<p id="ppos"> <mark style="background-color:#6DFE00;">Feel good</mark> about myself.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> run a mile just recently.</p>
+<p id="ppos"> I had a back <mark style="background-color:#FF8B8B;">injury</mark> but this morning it was <mark style="background-color:#6DFE00;">feeling better</mark> lately and I have been able to start exercising again.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">love</mark> getting to play volleyball a couple of times a week!</p>
+<p> I ran for 26.</p>
+<p> 5 minutes on the treadmill, the longest I have run( in time or miles) in almost three years.</p>
+<p> Going for a run.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> exercise this weekend.</p>
+<p> I went for a run.</p>
+<p id="ppos"> I spent the afternoon playing volleyball because the weather was <mark style="background-color:#6DFE00;">good</mark>.</p>
+<p id="ppos"> I ran a mile faster today than I ever have and keeping <mark style="background-color:#6DFE00;">improving</mark> my time to make it quicker.</p>
+<p id="ppos"> I lifted weights at a new gym and it <mark style="background-color:#6DFE00;">was a great</mark> place to find.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> when I went to the gym last week.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> workout.</p>
+<p> I went to the gym and did an hour of cardio.</p>
+<p> I got up early to exercise.</p>
+<p> i got a new membership to the gym.</p>
+<p id="ppos"> I went for a run last night after a couple weeks of eating <mark style="background-color:#FF8B8B;">poorly</mark> and not exercising much and it <mark style="background-color:#6DFE00;">felt so good</mark> to be taking control of my health.</p>
+<p> I just came back from a really hard workout.</p>
+<p id="ppos"> I am sweaty and <mark style="background-color:#FF8B8B;">tired</mark>, but feel like I have kicked the day off <mark style="background-color:#6DFE00;">correctly</mark>.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> walk 6 miles.</p>
+<p id="ppos"> I went to the gym which allowed me to <mark style="background-color:#6DFE00;">decompress</mark> from my work day and <mark style="background-color:#6DFE00;">relax</mark>.</p>
+<p> I hit a new PR on low bar squat in the gym.</p>
+<p id="ppos"> When I went to the gym this morning, I finally <mark style="background-color:#6DFE00;">mastered</mark> my handstand and it made me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p> Went to the gym and set a personal record on bench press with dumbbells.</p>
+<p id="ppos"> I went to exercise class this morning and <mark style="background-color:#6DFE00;">really enjoyed</mark> it.</p>
+<p> I went on an 8 mile bike ride which is the longest distance I have been able to ride.</p>
+<p id="ppos"> I went for a 2 mile run at night, it was <mark style="background-color:#6DFE00;">perfect</mark> weather( 60 degrees) for running.</p>
+<p id="ppos"> I went to the gym to train after <mark style="background-color:#6DFE00;">recovering</mark> from an intercostal <mark style="background-color:#FF8B8B;">strain</mark> and a cold and lifted exactly what I needed to.</p>
+<p> I worked out.</p>
+<p> I went swimming.</p>
+<p id="ppos"> Exercise has such a profound effect on our <mark style="background-color:#6DFE00;">happiness</mark> and <mark style="background-color:#6DFE00;">well-being</mark> that it is actually been proven to be an <mark style="background-color:#6DFE00;">effective</mark> strategy for <mark style="background-color:#6DFE00;">overcoming depression</mark>.</p>
+<p id="pneg"> In a study cited in Shawn Achor's book, The Happiness Advantage 1, three groups of patients treated their <mark style="background-color:#FF8B8B;">depression</mark> with either medication, exercise, or a combination of the two.</p>
+<p> The results of this study really surprised me.</p>
+<p id="ppos"> I exercised at the park, it <mark style="background-color:#6DFE00;">was fun</mark>.</p>
+<p> I went exercising for an hour this morning.</p>
+<p id="ppos"> I went to the gym to workout and <mark style="background-color:#6DFE00;">accomplished</mark> my <mark style="background-color:#6DFE00;">fitness</mark> goals.</p>
+<p id="ppos"> While at the gym, the gentleman who signed me up for my membership <mark style="background-color:#6DFE00;">complimented</mark> me on my gym <mark style="background-color:#6DFE00;">progress</mark>.</p>
+<p> I signed up at the gym in the town I used to live in.</p>
+<p> It had been many months since I had seen him.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> get a workout in this morning before the kids woke up.</p>
+<p id="pneg"> I performed a workout that was <mark style="background-color:#FF8B8B;">difficult</mark> and completed it within an hour.</p>
+<p> I have been trying incredibly hard to get myself back into shape.</p>
+<p> This morning, I put on a kettlebell HIIT workout on Youtube.</p>
+<p id="pneg"> I was expecting to <mark style="background-color:#FF8B8B;">struggle</mark> through the workout.</p>
+<p id="ppos"> When I conquered that workout, I <mark style="background-color:#6DFE00;">felt amazing</mark>.</p>
+<p> i started to study yoga.</p>
+<p> I ran a longer distance than I have ever run before.</p>
+<p id="ppos"> I got to go to the gym and work out, which always makes me <mark style="background-color:#6DFE00;">feel good</mark>.</p>
+<p id="ppos"> Had a <mark style="background-color:#6DFE00;">really good</mark> workout session and went to bed early.</p>
+<p> I lifted some weights in the morning for a workout.</p>
+<p> performing yoga in the morning.</p>
+<p id="ppos"> I did some yoga and it <mark style="background-color:#6DFE00;">felt really good</mark> since I had been sitting all day and my body was tight and <mark style="background-color:#FF8B8B;">sore</mark>.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> when I saw <mark style="background-color:#6DFE00;">improvements</mark> to my body after looking at the mirror at home after having been going to the gym for the past year.</p>
+<p> Running around a lake.</p>
+<p> I finally completed converting my garage into a workout gym.</p>
+<p id="ppos"> I went to the gym and had a <mark style="background-color:#6DFE00;">really good</mark> workout.</p>
+<p> I joined a local senior center in order to take aerobics classes.</p>
+<p> i went to running.</p>
+<p> I ran for longer than I ever have while working out on the elliptical at the gym today and saw I burned over 500 calories!</p>
+<p id="pneg"> I ran a 5K run in under 30 minutes and was barely <mark style="background-color:#FF8B8B;">out of breath</mark> at the end.</p>
+<p> I ran into an acquaintance at the gym.</p>
+<p id="ppos"> I got in a <mark style="background-color:#6DFE00;">very good</mark> workout.</p>
+<p> Going on a long run.</p>
+<p id="ppos"> I put in a <mark style="background-color:#6DFE00;">good</mark> workout today.</p>
+<p> I went to the gym for the second time this week to start a new trend-practice of going regularly.</p>
+<p id="ppos"> I went to the gym for the first time in months and had a <mark style="background-color:#6DFE00;">good</mark> session.</p>
+<p> Today I went for a run with my new Nikes.</p>
+<p> I finally went to the gym a whole week.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> workout at my gym.</p>
+<p> I went to the gym today.</p>
+<p> I went on a run.</p>
+<p> I went on a mile long jog around town after work.</p>
+<p> Went for a run.</p>
+<p id="pneg"> I finally <mark style="background-color:#FF8B8B;">stuck</mark> to a workout routine.</p>
+<p> I ran 2 miles in the morning before work.</p>
+<p id="ppos"> I did not go to the gym yesterday, instead I stayed home and <mark style="background-color:#6DFE00;">caught up with</mark> everything around the apartment which was <mark style="background-color:#6DFE00;">nice</mark>.</p>
+<p id="ppos"> I took a walk, which, even though I did not want to, made me <mark style="background-color:#6DFE00;">feel better</mark> after.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> get in an intense push workout that makes me feel <mark style="background-color:#6DFE00;">nice</mark> and pumped up.</p>
+<p> I ran a few miles and got a lot of exercise.</p>
+<p> When my friend and I exercised together at the gym.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> when I went to the gym this morning.</p>
+<p id="ppos"> Going to the gym and exercising made me <mark style="background-color:#6DFE00;">happy</mark> because I was <mark style="background-color:#6DFE00;">glad</mark> I made it there and I was <mark style="background-color:#6DFE00;">happy</mark> I could accomplish the whole class.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">very happy</mark> while working out at the gym last night since it had been the for the first time I worked out since a couple of months ago.</p>
+<p id="ppos"> The feeling of <mark style="background-color:#6DFE00;">satisfaction</mark> that I had after completing the work out made me feel <mark style="background-color:#6DFE00;">very happy</mark>.</p>
+<p id="ppos"> I completed my daily weight lifting workout <mark style="background-color:#6DFE00;">without feeling exhausted</mark>.</p>
+<p id="ppos"> Exercise always make me <mark style="background-color:#6DFE00;">happy</mark> because it <mark style="background-color:#6DFE00;">energizes</mark> me throughout the day.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout today so that made me <mark style="background-color:#6DFE00;">happy</mark> both during the workout and afterwards.</p>
+<p id="ppos"> My muscles were <mark style="background-color:#FF8B8B;">sore</mark> from a workout two days ago, but they <mark style="background-color:#6DFE00;">feel much better</mark> now.</p>
+<p id="ppos"> I had two <mark style="background-color:#6DFE00;">good</mark> workouts yesterday.</p>
+<p> I walked 5 miles this morning.</p>
+<p> I went for a run last night for the first time in a while.</p>
+<p> I went for a long walk.</p>
+<p id="ppos"> I felt <mark style="background-color:#6DFE00;">energized</mark> after coming back from a jog.</p>
+<p id="ppos"> Going out for a <mark style="background-color:#6DFE00;">nice</mark> jog in the park on a <mark style="background-color:#6DFE00;">cool</mark> Monday morning.</p>
+<p> I went out and played tennis for an hour and a half.</p>
+<p id="ppos"> Have a <mark style="background-color:#6DFE00;">nice</mark> glass of cold water after my workout felt unreal.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> leg day at the gym!</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout at the gym this morning.</p>
+<p> I walked for 45 minutes on the treadmill during lunch.</p>
+<p> I meditated quietly at my home for 20 minutes.</p>
+<p> I did an intense workout with a friend for the first time in a few weeks.</p>
+<p> I exercised a little.</p>
+<p id="ppos"> Finding an <mark style="background-color:#6DFE00;">awesome</mark> new song to workout to was just what I needed and <mark style="background-color:#6DFE00;">excited</mark> me about my next gym visit.</p>
+<p> Settings a new personal best for push-ups.</p>
+<p id="ppos"> Exercising, running and walking for 3 hours kept me <mark style="background-color:#6DFE00;">motivated</mark>.</p>
+<p> I drank cold water after a hard workout.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> time exercising this morning!</p>
+<p> I ran a mile in under 8 minutes today.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> when I went for a run.</p>
+<p> I hit a new personal best on deadlifts at the gym.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> take my puppy on a 3 mile walk <mark style="background-color:#6DFE00;">without any pain</mark>.</p>
+<p> I walked 10 miles this morning.</p>
+<p id="ppos"> Today I <mark style="background-color:#6DFE00;">was able to</mark> <mark style="background-color:#6DFE00;">take a break</mark> from work and go to the gym.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> work out today for my run, it went as well or possibly even <mark style="background-color:#6DFE00;">better than</mark> I could have hoped for.</p>
+<p> Did a little running on the treadmill.</p>
+<p id="pneg"> Going to the gym and getting the after workout <mark style="background-color:#FF8B8B;">soreness</mark>.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> deadlift day at the gym.</p>
+<p> I flirted with the hot MILF in my yoga class.</p>
+<p> I ran on the treadmill yesterday.</p>
+<p id="ppos"> I felt <mark style="background-color:#6DFE00;">awesome</mark> after a <mark style="background-color:#6DFE00;">good</mark> workout.</p>
+<p> I did a boxing workout.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">felt good</mark> after a run this morning.</p>
+<p id="ppos"> It was an unexpectedly <mark style="background-color:#6DFE00;">beautiful</mark> day out so I went for a jog during lunchtime.</p>
+<p> I walked 5 miles.</p>
+<p> I did some running in the park.</p>
+<p id="ppos"> Having the <mark style="background-color:#6DFE00;">motivation</mark> to get out of bed this morning and get to the gym before work.</p>
+<p id="ppos"> I found an article online that <mark style="background-color:#6DFE00;">helped</mark> me get started on my workout and diet-meal-prep schedule.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> do squats at the end of my gym session despite being <mark style="background-color:#FF8B8B;">tired</mark>.</p>
+<p id="pneg"> I completed a <mark style="background-color:#FF8B8B;">difficult</mark> exercise.</p>
+<p> Couple personal records biking.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> go to the gym and get a <mark style="background-color:#6DFE00;">good</mark> workout, it made me have better self <mark style="background-color:#6DFE00;">esteem</mark>.</p>
+<p> I completed another workout.</p>
+<p> Found a few minutes to get some exercise in.</p>
+<p> I went for a jog by myself.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> continue my streak of exercising this morning.</p>
+<p id="ppos"> I am trying to get in better shape and I have found the <mark style="background-color:#6DFE00;">motivation</mark> to <mark style="background-color:#6DFE00;">keep it up</mark>.</p>
+<p id="ppos"> When I <mark style="background-color:#6DFE00;">was able to</mark> walk 1-4 mile without being <mark style="background-color:#FF8B8B;">out of breath</mark>.</p>
+<p> I ran 2.</p>
+<p> 53 miles today which is farther than my previous run on Monday.</p>
+<p id="ppos"> My <mark style="background-color:#FF8B8B;">sore</mark> muscles from a workout two days ago are <mark style="background-color:#6DFE00;">not bothering</mark> me anymore, and so I <mark style="background-color:#6DFE00;">was able to</mark> get in a <mark style="background-color:#6DFE00;">good</mark> exercise again.</p>
+<p id="ppos"> I did things in my workout that I did not think I'd be able to do( stronger and <mark style="background-color:#6DFE00;">more capable</mark> than I thought!!).</p>
+<p> Did a workout at the local swimming pool his morning and had the entire pool to myself.</p>
+<p id="ppos"> I meditated briefly this morning and it <mark style="background-color:#6DFE00;">felt great</mark>.</p>
+<p> I started a new workout plan which went well today.</p>
+<p id="pneg"> I worked out at the gym for the first time in over a month due to <mark style="background-color:#FF8B8B;">illness</mark>.</p>
+<p> I woke up from a short nap after doing some physically exerting work.</p>
+<p id="pneg"> I completed a <mark style="background-color:#FF8B8B;">difficult</mark> workout.</p>
+<p> Took a shower after a workout.</p>
+<p id="ppos"> <mark style="background-color:#6DFE00;">Felt great</mark> after the shower.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> day at the gym, and lifted a lot.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> bike ride.</p>
+<p> I beat my personal best at the gym.</p>
+<p> I got to play with the dog at the gym.</p>
+<p id="ppos"> I felt <mark style="background-color:#6DFE00;">happy</mark> when I finished my Yoga workout... it <mark style="background-color:#FF8B8B;">sucked</mark> but was so <mark style="background-color:#6DFE00;">relieved</mark> when I did it and did not make an <mark style="background-color:#FF8B8B;">excuse</mark>.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> when I just exercised at the gym 3 hours ago.</p>
+<p> Worked out at the gym.</p>
+<p> i went to yoga class.</p>
+<p> Doing yoga after putting the kids to bed.</p>
+<p id="ppos"> I went to the gym for the first time in a week which really made me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> workout at the gym.</p>
+<p> I got up very early and got my workout in.</p>
+<p> My gym got some new battle ropes.</p>
+<p> Went for a walk this morning and got some exercise.</p>
+<p id="ppos"> Doing yoga within the past 24 hours made me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">managed to</mark> squeeze in a <mark style="background-color:#6DFE00;">good</mark> workout between work tasks.</p>
+<p id="ppos"> I went to my climbing gym and I <mark style="background-color:#6DFE00;">overcame</mark> a <mark style="background-color:#FF8B8B;">problem</mark> that I have not been able to do for the past few weeks.</p>
+<p> Went to workout with my girlfriend at the gym.</p>
+<p> hitting the gym and working out.</p>
+<p> I went for a 10 mile walk.</p>
+<p id="ppos"> i <mark style="background-color:#6DFE00;">was able to</mark> go to the gym and get a <mark style="background-color:#6DFE00;">good</mark> workout.</p>
+<p> Today early morning i went for an walking in a beach which is nearby to my house.</p>
+<p id="ppos"> I done a exercise and yoga for an one hour its gives me <mark style="background-color:#6DFE00;">peaceful</mark> mind and feeling <mark style="background-color:#6DFE00;">fresh air</mark>.</p>
+<p id="ppos"> It makes my mind in an <mark style="background-color:#6DFE00;">happy</mark> mood.</p>
+<p> I walked 3 kms in the morning today and also did some push ups.</p>
+<p id="ppos"> This made my morning and I am <mark style="background-color:#6DFE00;">very happy</mark> for that.</p>
+<p id="ppos"> I worked out a little and it felt <mark style="background-color:#6DFE00;">rejuvenating</mark>.</p>
+<p> i was at the gym.</p>
+<p> I went for a jog outside.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">very good</mark> workout and that made me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> cardio workout at the gym shooting around on the basketball court.</p>
+<p> Today was the 10th day in a row that I have gotten up early to do a workout.</p>
+<p id="ppos"> I am <mark style="background-color:#6DFE00;">really happy</mark> and <mark style="background-color:#6DFE00;">proud</mark> of myself.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">nice</mark> <mark style="background-color:#6DFE00;">easy</mark> run this morning before work.</p>
+<p id="ppos"> I worked out at the gym yesterday, I did a full round of <mark style="background-color:#6DFE00;">strength</mark> training and ran for almost two miles.</p>
+<p id="ppos"> I felt <mark style="background-color:#6DFE00;">relaxed</mark> and <mark style="background-color:#6DFE00;">happy</mark> after it was over.</p>
+<p id="ppos"> I got up a little earlier and got a <mark style="background-color:#6DFE00;">good</mark> workout in before work.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">love</mark> play Soccer in the Stadium with my Friends.</p>
+<p> Worked out this morning.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> workout yesterday and am <mark style="background-color:#6DFE00;">recovering</mark> well from my marathon.</p>
+<p> I went for a run before my shower for about 20 minutes.</p>
+<p id="ppos"> I took a quick shower after my workout and that too was <mark style="background-color:#6DFE00;">rejuvenating</mark>.</p>
+<p id="ppos"> I went for a jog in the <mark style="background-color:#6DFE00;">nice</mark> morning air and it made me <mark style="background-color:#6DFE00;">feel great</mark>.</p>
+<p> I worked out at my local gym.</p>
+<p id="pneg"> I was feeling <mark style="background-color:#FF8B8B;">tired</mark> but <mark style="background-color:#FF8B8B;">forced</mark> myself to go to the gym and <mark style="background-color:#6DFE00;">had a great</mark> workout.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> run, I felt really great after.</p>
+<p> I actually did some exercise.</p>
+<p id="ppos"> Going to the gym and having a <mark style="background-color:#6DFE00;">good</mark> workout.</p>
+<p> I set a new personal record at the gym.</p>
+<p> I did 30 push-ups in the evening.</p>
+<p id="ppos"> <mark style="background-color:#6DFE00;">Managed to</mark> <mark style="background-color:#FF8B8B;">snag</mark> a girl's number at the gym.</p>
+<p> Woke up early and performed pilates exercise routine.</p>
+<p> Getting ready to go to the gym finally.</p>
+<p id="ppos"> <mark style="background-color:#6DFE00;">Had a great</mark> workout session riding 20 miles on bike.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> get through 4 sets of my workout.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">got a chance</mark> to go to the gym and work out after not having gone for a while.</p>
+<p id="ppos"> I took a <mark style="background-color:#6DFE00;">relaxing</mark> morning run yesterday.</p>
+<p> I got a great workout in at the gym after work.</p>
+<p> I started exercising again.</p>
+<p id="ppos"> I worked out this morning and felt a <mark style="background-color:#6DFE00;">legitimate</mark> high from the <mark style="background-color:#6DFE00;">excellent</mark> exercise.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> go exercise at the local park.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> workout and <mark style="background-color:#6DFE00;">felt good</mark> about how it went.</p>
+<p id="ppos"> I felt like I worked hard and got to <mark style="background-color:#6DFE00;">relieve</mark> some <mark style="background-color:#FF8B8B;">stress</mark> a bit.</p>
+<p id="ppos"> I went to yoga and <mark style="background-color:#6DFE00;">had a great</mark> workout.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> do these poses with greater <mark style="background-color:#6DFE00;">ease</mark>.</p>
+<p> I got through a tough workout.</p>
+<p> I finished my workout at the gym.</p>
+<p id="ppos"> It was my first time back at the gym in a long time and it <mark style="background-color:#6DFE00;">felt good</mark> to exercise.</p>
+<p> I listened to two full chapters of my current audiobook while working out on the elliptical at the gym.</p>
+<p id="ppos"> While taking my walk on the morning of 5-25- 2017, I spotted a puppy wandering unattended close to the the edge of the street so I took it <mark style="background-color:#6DFE00;">out of danger</mark>.</p>
+<p> I went for a 3 mile run.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">lost some weight</mark> through diet changes but I have finally started working out in a gym yesterday after a long layoff.</p>
+<p> Going to workout for 30 min.</p>
+<p id="ppos"> I went to the gym and <mark style="background-color:#6DFE00;">had a great</mark> workout.</p>
+<p id="ppos"> I am switching it up and it <mark style="background-color:#6DFE00;">feels great</mark>.</p>
+<p id="ppos"> I did a pretty intense workout and I <mark style="background-color:#6DFE00;">felt great</mark> afterwards.</p>
+<p> Worked out.</p>
+<p> I went out for a jog and got caught in the rain.</p>
+<p id="ppos"> I woke up early and <mark style="background-color:#6DFE00;">enjoyed</mark> an intense workout in the gym.</p>
+<p> Went and did my ab workout and made a glass of chocolate milk.</p>
+<p> I ran the fastest 10k to date at the gym this evening.</p>
+<p id="ppos"> I had a particularly <mark style="background-color:#6DFE00;">relaxing</mark> yoga class this morning.</p>
+<p> Completing a workout video this morning.</p>
+<p id="pneg"> I tried something some new exercise in gym and it left me <mark style="background-color:#FF8B8B;">breathless</mark> and my muscles <mark style="background-color:#FF8B8B;">so sore</mark> and <mark style="background-color:#FF8B8B;">engorged</mark> with blood, it <mark style="background-color:#6DFE00;">was amazing</mark> experience, it felt <mark style="background-color:#6DFE00;">quite strengthening</mark>( like I am getting stronger).</p>
+<p id="ppos"> Yesterday afternoon i participated one day yoga class event and i was <mark style="background-color:#6DFE00;">happy</mark> to learn basic yoga exercises and how to breath <mark style="background-color:#6DFE00;">properly</mark>.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> exercise today and ride my bike for half an hour.</p>
+<p id="ppos"> The endorphins from the exercise <mark style="background-color:#6DFE00;">felt great</mark> and I felt <mark style="background-color:#6DFE00;">really happy</mark>.</p>
+<p> I hit a new personal max on the bench press at the gym today.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> workout at gym today early morning.</p>
+<p> I ran 5 miles in a race.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> jog.</p>
+<p> I actually went to the gym for once!</p>
+<p id="ppos"> I went for an additional run and my body does <mark style="background-color:#6DFE00;">not hurt</mark>, think it shows that I am getting <mark style="background-color:#6DFE00;">more in shape</mark>.</p>
+<p> I had a early morning run.</p>
+<p> I went to about 5 workout sessions this week when I had previously missed quite a few.</p>
+<p> Went to the gym again.</p>
+<p id="ppos"> It is <mark style="background-color:#FF8B8B;">such a struggle for</mark> me to exercise but I am <mark style="background-color:#6DFE00;">happy</mark> and <mark style="background-color:#6DFE00;">grateful</mark> I made it!</p>
+<p id="ppos"> I felt <mark style="background-color:#6DFE00;">extra flexible</mark> today and <mark style="background-color:#6DFE00;">was able to</mark> push into a deeper pose like I was Gumby.</p>
+<p id="ppos"> I exercised again today and have been noticing <mark style="background-color:#6DFE00;">improvements</mark> in both building muscle and weight loss.</p>
+<p> I was at the gym.</p>
+<p> I did not want to exercise but did.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">felt much better</mark> and got a <mark style="background-color:#6DFE00;">good</mark> night's sleep later.</p>
+<p id="ppos"> Yesterday i attended one day <mark style="background-color:#6DFE00;">fitness</mark> event and i was <mark style="background-color:#6DFE00;">very happy</mark> to know how to do exercise for minimum one hour and keep my body fit.</p>
+<p id="ppos"> Going to the gym and having a <mark style="background-color:#6DFE00;">good</mark> workout.</p>
+<p> I went to the gym for the first time in about a week.</p>
+<p> i went for a bike ride.</p>
+<p> I finished my exercise on the bike in the morning.</p>
+<p> My yoga class this morning.</p>
+<p> I woke up early to receive the dawn, make some yoga movements and maditation in a park near my residence.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> go for a run yesterday for about 4 miles.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> push my self at the gym this morning and did a harder workout than normal.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">felt great</mark> afterwards.</p>
+<p> i went to the gym and worked out.</p>
+<p> I practiced yoga for an hour at the gym.</p>
+<p> I went to the gym and worked out twice as long as I expected myself to.</p>
+<p id="ppos"> Getting up early in the morning to go for a run and <mark style="background-color:#6DFE00;">feeling good</mark> after the run.</p>
+<p id="ppos"> I walked the dog and <mark style="background-color:#6DFE00;">had a great</mark> time listening to music and jogging while doing it.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">was able to</mark> exercise to work on my cardio.</p>
+<p> I went to the gym in the morning and worked on my legs.</p>
+<p id="ppos"> The <mark style="background-color:#6DFE00;">satisfaction</mark> of doing a <mark style="background-color:#6DFE00;">good</mark> workout was <mark style="background-color:#6DFE00;">awesome</mark>.</p>
+<p id="ppos"> i <mark style="background-color:#FF8B8B;">ripped</mark> through the workout and it <mark style="background-color:#6DFE00;">felt great</mark>.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> exercise work out.</p>
+<p id="ppos"> My legs were <mark style="background-color:#FF8B8B;">sore</mark> afterwards, but it <mark style="background-color:#6DFE00;">felt good</mark>.</p>
+<p> I went for a 3 mile walk around the lake.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> run this morning.</p>
+<p> I got to spend time at the gym last night.</p>
+<p id="ppos"> I woke up early this morning and <mark style="background-color:#6DFE00;">had a great</mark> workout.</p>
+<p> I exercised my muscles.</p>
+<p id="ppos"> I was <mark style="background-color:#6DFE00;">happy</mark> that I tried new things at the gym today.</p>
+<p id="ppos"> I prayed in the morning and <mark style="background-color:#6DFE00;">had a great</mark> workout before 6AM.</p>
+<p> I felt a boost of energy from exercising, which I rarely do.</p>
+<p> I got back to going to the gym for the first time last night.</p>
+<p id="ppos"> It was hard but I am really feeling it today so I know I am <mark style="background-color:#6DFE00;">back on track</mark> to <mark style="background-color:#6DFE00;">fitness</mark>.</p>
+<p> I hit a new personal record in the gym.</p>
+<p id="ppos"> I exercised at home and it <mark style="background-color:#6DFE00;">felt good</mark>.</p>
+<p id="ppos"> I worked out and got a lot of <mark style="background-color:#6DFE00;">good</mark> exercise.</p>
+<p> I exercised quite a lot.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout at the gym, and made some <mark style="background-color:#6DFE00;">good</mark> <mark style="background-color:#6DFE00;">progress</mark>.</p>
+<p id="ppos"> I got a <mark style="background-color:#6DFE00;">good</mark> mile time on my run this morning.</p>
+<p id="ppos"> I had a <mark style="background-color:#6DFE00;">good</mark> workout at the gym.</p>
+<p> I did my workout.</p>
+<p id="ppos"> Doing exercises like running, boxing and yoga <mark style="background-color:#6DFE00;">relaxes</mark> me that I did yoga for 1 hour yesterday which made me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p id="ppos"> I went to the gym with my friends and had a <mark style="background-color:#6DFE00;">good</mark> workout.</p>
+<p id="ppos"> I went to the gym today and seeing the <mark style="background-color:#6DFE00;">progress</mark> I have made makes me <mark style="background-color:#6DFE00;">happy</mark>.</p>
+<p> While I was working out, I can tell that my muscles are getting bigger.</p>
+<p id="ppos"> The hard work and <mark style="background-color:#6DFE00;">dedication</mark> I put in and out of the gym <mark style="background-color:#6DFE00;">really pays off</mark> and makes me <mark style="background-color:#6DFE00;">happy</mark> knowing that I am looking better.</p>
+<p> I was lifting weights at the gym.</p>
+<p> I exercise well today after a long time.</p>
+<p> Went for a jog.</p>
+<p id="ppos"> The final event that made me <mark style="background-color:#6DFE00;">happy</mark> today was having a <mark style="background-color:#6DFE00;">good</mark>, short but intense workout.</p>
+<p> I went running.</p>
+<p id="ppos"> Went Jogging yesterday evening and that made me <mark style="background-color:#6DFE00;">feel good</mark>.</p>
+<p id="ppos"> I <mark style="background-color:#6DFE00;">had a great</mark> workout last night.</p>
+
+            <br><br><br><br><hr><font size = "-1">Generated by <a href="http://tecnolengua.uma.es/lingmotif"> <i> Lingmotif </i></a> on Fri Feb 19 17:49:52 2021</font>            
+            </main>
+        </body>
+    </html>
+    
