@@ -1,7 +1,17 @@
 # Embeddings
 
+These are embeddings for the top 500 keywords of each of the cateogories considered in HappyDB (https://github.com/megagonlabs/HappyDB).
+
+The embeddings and metadata are meant to be visualized using Tensorflow Projector (https://projector.tensorflow.org).
+
+
 
 # Keywords
+
+These keywords were extracted from the HappyDB corpus using the spaCy pipeline extension TextRank.
+
+https://github.com/DerwenAI/pytextrank
+
 
 
 # Lingmotif
@@ -19,14 +29,6 @@ Classification results obtained with Lingmotif and HuggingFace-DistilBERT
 https://lingmotif.com
 
 https://huggingface.co/docs/transformers/model_doc/distilbert
-
-
-
-# HappyDB Embeddings
-
-These are embeddings for the top 500 keywords of each of the cateogories considered in HappyDB (https://github.com/megagonlabs/HappyDB).
-
-The embeddings and metadata are meant to be visualized using Tensorflow Projector (https://projector.tensorflow.org).
 
 
 
